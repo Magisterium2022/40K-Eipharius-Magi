@@ -348,6 +348,18 @@
 /obj/item/ammo_magazine/bolt_rifle_magazine/sister
 	name = "Godwyn-De'az Pattern Bolter Rifle Magazine"
 	ammo_type = /obj/item/ammo_casing/bolter
+	
+/obj/item/ammo_magazine/bolt_heavy_magazine 
+	name = "Heavy Bolter Magazine"
+	icon_state = "ersatz"
+	origin_tech = list(TECH_COMBAT = 2)
+	mag_type = MAGAZINE
+	caliber = ".75"
+	matter = list(DEFAULT_WALL_MATERIAL = 1260)
+	ammo_type = /obj/item/ammo_casing/bolter
+	max_ammo = 60
+	multiple_sprites = 1
+
 
 /* ork mags */
 
