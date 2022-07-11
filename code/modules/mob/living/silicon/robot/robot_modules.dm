@@ -448,6 +448,23 @@ var/global/list/robot_modules = list(
 	var/obj/item/melee/baton/robot/B = locate() in src.modules
 	if(B && B.bcell)
 		B.bcell.give(amount)
+		
+/obj/item/robot_module/security/combatservitor
+	name = "combat servitor module"
+	channels = list("Security" = 1, "Engineering" = 1, "Imperial" = 1)
+	networks = list(NETWORK_SECURITY)
+	hide_on_manifest = 1
+	sprites = list("Combat Android" = "droid-combat")
+	/obj/item/robot_module/security/combat/New() 
+	src.modules += new /obj/item/device/flash(src)
+	src.modules += new /obj/item/borg/sight/thermal(src)
+	src.modules += new /obj/item/gun/projectile/heavybolter/mounted(src)
+	src.modules += new /obj/item/gun/energy/plasmacutter(src)
+	src.modules += new /obj/item/melee/mercycs(src)
+	src.modules += new /obj/item/borg/combat/mobility(src)
+	src.emag = new /obj/item/gun/energy/lasercannon/mounted(src)
+	..()
+
 
 /obj/item/robot_module/janitor
 	name = "janitorial robot module"
