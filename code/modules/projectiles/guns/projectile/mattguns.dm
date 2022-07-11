@@ -1075,6 +1075,60 @@
 	else
 		icon_state = "sisterbolter-30-e"
 
+/obj/item/gun/projectile/heavybolter  
+	name = "Godwyn Mark Vb Pattern Heavy Bolter" 
+	desc = "An incredibly large gun, covered with holy scripture." 
+	icon_state = "hmg" 
+	item_state = "hmg" 
+	str_requirement = 16
+	w_class = ITEM_SIZE_HUGE 
+	force = 30 
+	slot_flags = SLOT_BACK|SLOT_S_STORE 
+	max_shells = 60 
+	caliber = ".75" 
+	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 1, TECH_ILLEGAL = 2) 
+	ammo_type = /obj/item/ammo_casing/bolter 
+	load_method = MAGAZINE 
+	magazine_type = /obj/item/ammo_magazine/bolt_heavy_magazine 
+	allowed_magazines = /obj/item/ammo_magazine/bolt_heavy_magazine 
+	wielded_item_state = "hmg-wielded" 
+	fire_sound = 'sound/weapons/gunshot/harbinger.ogg' 
+	unload_sound  = 'sound/weapons/guns/interact/ltrifle_magout.ogg' 
+	reload_sound  = 'sound/weapons/guns/interact/ltrifle_magin.ogg' 
+	cock_sound  = 'sound/weapons/guns/interact/ltrifle_cock.ogg'
+	loaded_icon = "hmg" 
+	unwielded_loaded_icon = "hmg" 
+	wielded_loaded_icon = "hmg-wielded" 
+	unloaded_icon = "hmg-e" 
+	unwielded_unloaded_icon = "hmg-e" 
+	wielded_unloaded_icon = "hmg-wielded-e" 
+	fire_delay = 1
+	burst = 1 
+	move_delay = 5 
+	one_hand_penalty = 10 
+	automatic = 1 
+	firemodes = list() 
+	gun_type = GUN_LMG 
+	accuracy = 0 
+/obj/item/gun/projectile/heavybolter/mounted
+	name = "Godwyn Mark Vb Pattern Heavy Bolter" 
+	desc = "An incredibly large gun, covered with holy scripture." 
+	icon_state = "hmg" 
+	item_state = "hmg" 
+	str_requirement = 16
+	w_class = ITEM_SIZE_HUGE 
+	force = 30 
+	slot_flags = SLOT_BACK|SLOT_S_STORE 
+	max_shots = 45
+	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 1, TECH_ILLEGAL = 2)
+	projectile_type = /obj/item/projectile/bullet/bolt 
+	wielded_item_state = "hmg-wielded"
+	self_recharge = 1 
+	move_delay = 0 
+	one_hand_penalty = 0  //The gun is mounted with shock absorbers directly into the arm of a cyborg.
+
+
+
 //various kroot rifles, bolt action and lever
 
 /obj/item/gun/projectile/shotgun/pump/boltaction/krootrifle
