@@ -10,6 +10,7 @@ var/global/list/robot_modules = list(
 	"Combat" 		= /obj/item/robot_module/security/combat,
 	"Engineering"	= /obj/item/robot_module/engineering/general,
 	"Janitor" 		= /obj/item/robot_module/janitor
+	"Combat Serv" 	= /obj/item/robot_module/security/combatservitor
 	)
 
 /obj/item/robot_module
