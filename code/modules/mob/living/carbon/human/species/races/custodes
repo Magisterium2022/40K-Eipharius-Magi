@@ -11,9 +11,9 @@ CUSTODES
 	brute_mod =      0.01                    //Warp Fuckery in their genes
 	burn_mod =       0.01                  //Warp Fuckery in their genes
 	tox_mod =       0.01    
-  oxy_mod =       0.01    
-  clone_mod =       0.01    
-  brain_mod =       0.01    
+	oxy_mod =       0.01    
+	clone_mod =       0.01    
+	brain_mod =       0.01    
 	unarmed_types = list(/datum/unarmed_attack/stomp/astartes, /datum/unarmed_attack/kick/astartes, /datum/unarmed_attack/punch/astartes, /datum/unarmed_attack/bite/astartes)
 	blurb = "The Custodes is an elite cadre of genetically-engineered transhuman warriors who are even more potent in combat than the Adeptus Astartes. They are to the Space Marines as the Emperor is to His primarchs, and it is rumoured that they were each created by the Master of Mankind personally."
 	min_age = 10000
