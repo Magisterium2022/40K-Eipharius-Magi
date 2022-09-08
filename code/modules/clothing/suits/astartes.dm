@@ -116,3 +116,15 @@
 	desc = "The Holy armour of the Emperor's chosen, This one bears the symbol of his position, Techmarine of the XVIIIth Chapter, Salamanders."
 	icon_state = "saltech"
 	item_state = "saltech"
+
+/obj/item/clothing/suit/armor/astartes/terminator
+	name = "Indomitus Pattern Terminator Armour"
+	icon = 'icons/mob/32x40/suits.dmi'
+	item_icons = list(slot_wear_suit_str = 'icons/mob/32x40/suits.dmi')
+	icon_state = "umpowerarmor" //Need to replace these
+	item_state = "umpowerarmor"
+	armor = list(melee = 120, bullet = 130, laser = 130, energy = 135, bomb = 100, bio = 100, rad = 100)
+	slowdown_per_slot[slot_wear_suit] = 1.5
+	sales_price = 500
+
+
