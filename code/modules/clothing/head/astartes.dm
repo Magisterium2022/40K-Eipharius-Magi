@@ -90,3 +90,13 @@
 	icon_state = "techhelm"
 	item_state = "techhelm"
 	flags_inv = HIDEMASK|HIDEEYES|HIDEFACE|HIDEEARS
+
+
+/obj/item/clothing/head/helmet/astartes/terminator
+	name = "Indomitus pattern Terminator Armour Helmet"
+	desc = "The daunting helmet of the Emperor's chosen"
+	icon = 'icons/mob/32x40/hats.dmi'
+	item_icons = list(slot_head_str = 'icons/mob/32x40/hats.dmi')
+	icon_state = "ultrahelm" //Need to replace this
+	item_state = "ultrahelm"
+	armor = list(melee = 90, bullet = 120, laser = 120, energy = 130, bomb = 100, bio = 100, rad = 100)
