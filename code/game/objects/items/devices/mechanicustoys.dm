@@ -74,6 +74,13 @@
 		visible_message("<span class='notice'>[C] is gently lathered in the holy oils of the Adeptus Mechanicus by [user]. The Machine Spirits will surely smile upon them now!</span>")
 	..()
 
+/obj/item/device/lube
+	name = "Ingot Lube"
+	desc = "Lubricant to properly deal with ingot crafting as a finisher."
+	icon = 'icons/obj/items/lube.dmi'
+	icon_state = "lube"
+	item_state = "lube"
+
 /obj/item/device/holyoils/attack_self(usr)
 	to_chat(usr,"<span class='warning'>You feel more nubile as you breathe the holy incenses in! Praise the Omnissiah!</span>")
 
@@ -99,6 +106,12 @@
 	..()
 	spawn(1) if(src) qdel(src)
 
+/obj/item/device/chisel
+	name = "Chisel"
+	desc = "An old item since mankind's first dawned days on Terra. You feel you could begin to craft anything from an ingot using this. At least the basic ingots that is."
+	icon = 'icons/obj/items/chisel.dmi'
+	icon_state = "chisel"
+	item_state = "chisel"
 
 /obj/item/device/lasercutter
 	name = "Laser Cutter"
@@ -120,6 +133,15 @@
 		visible_message("<span class='notice'>[C] is gingerly warmed with the laser cutter by [user]. Tingly!</span>")
 	..()
 
+/obj/item/device/hammer
+	name = "Hammer"
+	desc = "For any loyal citizen of the Imperium's ingot shaping."
+	icon = 'icons/obj/items/hammer.dmi'
+	icon_state = "hammer"
+	item_state = "hammer"
+	slot_flags = null
+	w_class = ITEM_SIZE_HUGE
+	var/constructionsystem = 0
 
 /obj/item/device/lasercutter/dropped() //since nodrop is fucked this will deal with it for now.
 	..()
@@ -139,12 +161,12 @@
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 	w_class = ITEM_SIZE_HUGE
 	weapon_speed_delay = 7
-	sales_price = 40
+	sales_price = 0
 
 /obj/item/melee/omnissiah_axe/dropped() //since nodrop is fucked this will deal with it for now.
 	..()
 	spawn(1) if(src) qdel(src)
-	
+
 
 //Biologis toys go below here---------------------------------------------------------------------------------
 /obj/item/device/neuraladapter
@@ -167,6 +189,14 @@
 		visible_message("<span class='notice'>The base of [C]'s skull is suddenly pierced with the neural adapter by [user], getting their mind programmed and indoctrinated!</span>")
 	..()
 
+obj/item/device/neuraladapter/attack(mob/living/carbon/human/skitarii/C, mob/living/carbon/human/user)
+	if(istype(C))
+		user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
+		playsound(src, 'sound/effects/adapter.ogg', 100, 1, 1)
+		visible_message("<span class='notice'>The base of [C]'s skull is suddenly pierced with the neural adapter by [user], performing neural stimulation procedure! It will help skitarii to awake faster, but not sure.</span>")
+		C.request_player()
+	..()
+
 /obj/item/device/neuraladapter/dropped() //since nodrop is fucked this will deal with it for now.
 	..()
 	spawn(1) if(src) qdel(src)
@@ -177,17 +207,17 @@
 
 /obj/item/melee/mounted_psword
 	name = "Power Blade"
-		desc = "A retractable power weapon affixed to the hands"
-		icon = 'icons/obj/guardpower_gear_32xOBJ.dmi'
-		icon_state = "powersword"
-		item_state = "powersword"
-		wielded_icon = "powersword"
-		force = 40
-		block_chance = 80
-		sharp = TRUE
-		obj_flags = OBJ_FLAG_CONDUCTIBLE
-		w_class = ITEM_SIZE_HUGE
-		weapon_speed_delay = 7
+	desc = "A retractable power weapon affixed to the hands"
+	icon = 'icons/obj/guardpower_gear_32xOBJ.dmi'
+	icon_state = "powersword"
+	item_state = "powersword"
+	wielded_icon = "powersword"
+	force = 40
+	block_chance = 80
+	sharp = TRUE
+	obj_flags = OBJ_FLAG_CONDUCTIBLE
+	w_class = ITEM_SIZE_HUGE
+	weapon_speed_delay = 7
 
 
 /obj/item/melee/mounted_psword/dropped() //since nodrop is fucked this will deal with it for now.
@@ -235,39 +265,22 @@
 	w_class = ITEM_SIZE_HUGE
 	origin_tech = list(TECH_COMBAT = 6, TECH_MATERIAL = 1, TECH_ILLEGAL = 2)
 	fire_sound = 'sound/weapons/gunshot/harbinger.ogg'
-	unload_sound 	= 'sound/weapons/guns/interact/ltrifle_magout.ogg'
-	reload_sound 	= 'sound/weapons/guns/interact/ltrifle_magin.ogg'
-	cock_sound 		= 'sound/weapons/guns/interact/ltrifle_cock.ogg'
-	loaded_icon = "ultrabolter-30"
-	unloaded_icon = "ultrabolter-e"
-	wielded_item_state = "autoshotty" // Do not remove this. We do not have any sprites for Bolters on-mob beyond this, it is perfect. 
-	loaded_icon = "autoshotty"
-	unwielded_loaded_icon = "autoshotty"
-	wielded_loaded_icon = "autoshotty-wielded"
-	unloaded_icon = "autoshotty-e"
-	unwielded_unloaded_icon = "autoshotty-e"
-	wielded_unloaded_icon = "autoshotty-wielded-e"
+	wielded_item_state = "autoshotty" // Do not remove this. We do not have any sprites for Bolters on-mob beyond this, it is perfect.
 	fire_delay = 2
 	burst = 1
 	move_delay = 3
 	automatic = 1
 	firemodes = list()
-	gun_type = GUN_AUTOMATIC
 	accuracy = 2
 	max_shots = 60
 	projectile_type = /obj/item/projectile/bullet/bolt/kp
 	origin_tech = null
 	self_recharge = 1
 	charge_meter = 0
+	charge_cost = 20
 
-
-/obj/item/gun/projectile/bolter/update_icon()
-	..()
-	if(ammo_magazine)
-		icon_state = "ultrabolter-30"
-	else
-		icon_state = "ultrabolter-e"
 
 /obj/item/gun/energy/bolter_mounted_heavy/dropped() //since nodrop is fucked this will deal with it for now.
 	..()
 	spawn(1) if(src) qdel(src)
+

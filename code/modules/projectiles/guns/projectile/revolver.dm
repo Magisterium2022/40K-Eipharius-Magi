@@ -69,11 +69,14 @@
 
 /obj/item/gun/projectile/revolver/mateba
 	name = "mateba"
+	desc = "The mateba revolver is commonly used by law enforcement and gangers, what it lacks in accuracy it makes up for in sheer firepower."
 	icon_state = "mateba"
 	caliber = ".50"
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2)
 	ammo_type = /obj/item/ammo_casing/a50
 	sales_price = 40
+	accuracy = -3
+	fire_delay= 3
 
 /obj/item/gun/projectile/revolver/detective
 	name = "revolver"
@@ -102,9 +105,19 @@
 		to_chat(M, "You name the gun [input]. Say hello to your new friend.")
 		return 1
 
+/obj/item/gun/projectile/revolver/detective/boscelot
+	name = "Boscelot Revolver"
+	desc = "A cheap revolver, copying the designs from Boscelot. Chambered in .38 and constantly asking the user why they didn't get a more powerful caliber."
+	icon_state = "snubby"
+	max_shells = 6
+	caliber = "38"
+	accuracy = -3.5
+	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2)
+	ammo_type = /obj/item/ammo_casing/c38
+
 /obj/item/gun/projectile/mervex
-	name = "mervex revolver"
-	desc = "The mervex revolver is commonly used by pilgrims that like classy. Commonly found on many hive worlds. Uses .357 ammo."
+	name = "Mervex Revolver"
+	desc = "The Mervex revolver is commonly used by pilgrims that like classy. Commonly found on many hive worlds. Uses .357 ammo."
 	icon_state = "mervex"
 	item_state = "crevolver"
 	caliber = "357"
@@ -112,7 +125,7 @@
 	handle_casings = CYCLE_CASINGS
 	max_shells = 6
 	force = 15
-	accuracy = -0.4 //not the best craftsmanship
+	accuracy = -2.5 //not the best craftsmanship
 	fire_delay= 3
 	ammo_type = /obj/item/ammo_casing/a357
 	var/chamber_offset = 0 //how many empty chambers in the cylinder until you hit a round
@@ -122,8 +135,8 @@
 	fire_sound = 'sound/weapons/guns/fire/revolver_fire.ogg'
 
 /obj/item/gun/projectile/necros
-	name = "necros revolver"
-	desc = "The necros is a heavy revolver used commonly by merchants. Uses .44 magnum ammo."
+	name = "Necros Revolver"
+	desc = "The Necros is a heavy revolver used commonly by merchants. Uses .44 magnum ammo."
 	icon_state = "necros"
 	item_state = "crevolver"
 	caliber = ".44"
@@ -131,7 +144,7 @@
 	handle_casings = CYCLE_CASINGS
 	max_shells = 6
 	force = 20
-	accuracy = -0.5
+	accuracy = -3
 	fire_delay= 2.8
 	ammo_type = /obj/item/ammo_casing/c44
 	var/chamber_offset = 0 //how many empty chambers in the cylinder until you hit a round
@@ -144,14 +157,14 @@
 /obj/item/gun/projectile/slugrevolver
 	name = "slug revolver"
 	desc = "The slug revolver is a fine piece of masterwork made on many forge worlds. This one seems to be a older model. Uses .44 ammo."
-	icon_state = "slug_revolver"
+	icon_state = "hunting_revolver"
 	item_state = "crevolver"
 	caliber = ".44"
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2)
 	handle_casings = CYCLE_CASINGS
 	max_shells = 6
 	force = 10
-	accuracy = -0.3
+	accuracy = -2.5
 	fire_delay= 2.7
 	ammo_type = /obj/item/ammo_casing/c44
 	var/chamber_offset = 0 //how many empty chambers in the cylinder until you hit a round
