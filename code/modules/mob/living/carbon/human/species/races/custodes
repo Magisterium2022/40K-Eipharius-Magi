@@ -45,7 +45,7 @@ CUSTODES
 	H.nutrition = INFINITY //he is sustained by faith alone.
 	H.vice = null //off for now
 	radiation_mod = 0.01
-	darkness_view = 20
+	darkness_view = 100
 	see_invisible = SEE_INVISIBLE_CULT //They can see lots of stuff.
   
 //gives Astartes aura
@@ -56,7 +56,7 @@ CUSTODES
 
 /datum/species/human/astartes/handle_post_spawn(var/mob/living/carbon/human/astartes/H)
 	. = ..()
-	H.age = rand(min_age,max_age)//asstardes ages are all over.
+	H.age = rand(min_age,max_age)
 	to_chat(H, "<big><span class='warning'>You are The Emperor's most faithful! Act like it!</span></big>")
 	H.update_eyes()	//hacky fix, i don't care and i'll never ever care
 //	H.rejuvenate()
@@ -115,8 +115,8 @@ CUSTODES
  	cannot_amputate = 1
  	max_damage = 500
 	min_broken_damage = 300
-  has_tendon = FALSE
-  gibbable = FALSE
+	has_tendon = FALSE
+	gibbable = FALSE
 
 /obj/item/organ/external/arm/right/unbreakable/custodes
 	dislocated = -1
@@ -126,7 +126,7 @@ CUSTODES
  	max_damage = 500
 	min_broken_damage = 300
  	has_tendon = FALSE
-  gibbable = FALSE
+	gibbable = FALSE
 
 /obj/item/organ/external/leg/unbreakable/custodes
 	dislocated = -1
@@ -135,8 +135,8 @@ CUSTODES
  	cannot_amputate = 1
  	max_damage = 500
 	min_broken_damage = 300
-  has_tendon = FALSE
-  gibbable = FALSE
+	has_tendon = FALSE
+	gibbable = FALSE
 
 /obj/item/organ/external/leg/right/unbreakable/custodes
 	dislocated = -1
@@ -145,8 +145,8 @@ CUSTODES
  	cannot_amputate = 1
  	max_damage = 500
 	min_broken_damage = 300
-  has_tendon = FALSE
-  gibbable = FALSE
+	has_tendon = FALSE
+	gibbable = FALSE
 
 /obj/item/organ/external/foot/unbreakable/custodes
 	dislocated = -1
@@ -155,8 +155,8 @@ CUSTODES
  	cannot_amputate = 1
  	max_damage = 500
 	min_broken_damage = 300
-  has_tendon = FALSE
-  gibbable = FALSE
+	has_tendon = FALSE
+	gibbable = FALSE
 
 /obj/item/organ/external/foot/right/unbreakable/custodes
 	dislocated = -1
@@ -166,19 +166,19 @@ CUSTODES
  	cannot_amputate = 1
  	max_damage = 500
 	min_broken_damage = 300
-  has_tendon = FALSE
-  gibbable = FALSE
+	has_tendon = FALSE
+	gibbable = FALSE
 
 /obj/item/organ/external/hand/unbreakable/custodes
 	dislocated = -1
 	arterial_bleed_severity = 0
 	cannot_break = 1
 	can_grasp = 1
-  cannot_amputate = 1
+	cannot_amputate = 1
  	max_damage = 500
 	min_broken_damage = 300
-  has_tendon = FALSE
-  gibbable = FALSE
+	has_tendon = FALSE
+	gibbable = FALSE
 
 /obj/item/organ/external/hand/right/unbreakable/custodes
 	dislocated = -1
@@ -188,14 +188,14 @@ CUSTODES
  	cannot_amputate = 1
  	max_damage = 500
 	min_broken_damage = 300
-  has_tendon = FALSE
-  gibbable = FALSE
+	has_tendon = FALSE
+	gibbable = FALSE
 
 
 /obj/item/organ/external/head/unbreakable/custodes
 	dislocated = -1
 	arterial_bleed_severity = 0
-  max_damage = 1000
+	max_damage = 1000
 	min_broken_damage = 500
 	cannot_break = 1
  	cannot_amputate = 1
