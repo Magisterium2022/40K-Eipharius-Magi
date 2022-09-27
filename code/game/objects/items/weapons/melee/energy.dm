@@ -380,7 +380,27 @@
 	..()
 	spawn(1) if(src) qdel(src)
 
-
+/obj/item/melee/energy/misericordia
+	name = "Misericordia"
+	desc = " The Misericordia (High Gothic: "blade of mercy") is a bladed melee weapon in the form of a long dagger or short sword that was carried by the Custodians of first the Legio Custodes and after the Horus Heresy, the Adeptus Custodes. The blade was symbolic, intended to represent that the Custodes were beneficiaries of the Magisterium Lex Ultima which placed them above the reach of all Imperial Law save for the commandments of the Emperor of Mankind Himself. The Misericordia was designed to deliver a single, mortal blow, and despite their symbolic nature, were sometimes used by individual Custodians to carry out a death sentence or offer the Emperor's Peace to a mortally wounded and suffering warrior."
+	item_state = "misericordia" // There is no on-mob for powersword we must use this. It looks alright.
+	icon_state = "misericordia"
+	wielded_icon = "misericordia"
+	active_force = 80 //should be enough to cut off most limbs
+	active_throwforce = 20
+	force = 50 //Auramite dagger
+	throwforce = 15
+	throw_speed = 1
+	throw_range = 4
+	sharp = TRUE
+	edge = 1
+	slot_flags = SLOT_BELT|SLOT_S_STORE 
+	block_chance = 30
+	w_class = ITEM_SIZE_NORMAL
+	atom_flags = ATOM_FLAG_NO_BLOOD
+	obj_flags = OBJ_FLAG_CONDUCTIBLE
+	origin_tech = list(TECH_MAGNET = 7, TECH_COMBAT = 7)
+	attack_verb = list("attacked", "chopped", "cleaved", "torn", "cut")
 
 
 
@@ -457,3 +477,5 @@
 
 	playsound(M, inject_sound, 100)
 	return
+
+
