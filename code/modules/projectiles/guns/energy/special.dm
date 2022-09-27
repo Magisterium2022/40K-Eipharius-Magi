@@ -116,3 +116,21 @@ obj/item/gun/energy/staff/focus
 	charge_cost = 300
 	projectile_type = 	/obj/item/projectile/energy/phosphor
 	self_recharge = 1
+
+/obj/item/gun/energy/guardian
+	name = "Guardian Spear"
+	desc = "The Guardian Spear has been the signature weapon of the Adeptus Custodes since the time of the Unification Wars in the 30th Millennium,"
+	item_icons = null
+	icon_state = "guardian_spear"
+	item_state = "guardian_spear"
+	fire_sound = 'sound/weapons/gunshot/loudbolt.ogg'
+	obj_flags =  OBJ_FLAG_CONDUCTIBLE
+	slot_flags = SLOT_BELT|SLOT_BACK
+	w_class = ITEM_SIZE_LARGE
+	force = 160
+	block_chance = 100
+	max_shots = 30
+	projectile_type = /obj/item/projectile/bullet/gyro
+	origin_tech = null
+	self_recharge = 1
+	charge_meter = 0
