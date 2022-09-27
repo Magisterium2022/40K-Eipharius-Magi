@@ -42,13 +42,64 @@
 	name = "MoonPact"
 	landmark_tag = "bloodpact_start"
 	base_area = /area/cadiaoutpost/oa/hangarpact
-	base_turf = /turf/simulated/floor/plating/reinforced
+	base_turf = /turf/simulated/floor/plating
 
 /obj/machinery/computer/shuttle_control/ferry/bloodpact
 	name = "Shuttle Control Console"
 	shuttle_tag = "Bloodpact"
 
 
+
+
+
+/datum/shuttle/autodock/ferry/tau
+	name = "tau1"
+	warmup_time = 10
+	waypoint_station = "tau_start"
+	waypoint_offsite = "tau_end"
+	shuttle_area = /area/cadiaoutpost/oa/shuttle/tau1
+
+/obj/effect/shuttle_landmark/ferry/tau_end
+	name = "PlanetTau"
+	landmark_tag = "tau_end"
+	base_area = /area/cadiaoutpost/oa/shuttle/tau2
+	base_turf = /turf/simulated/floor/plating
+
+/obj/effect/shuttle_landmark/ferry/tau_start
+	name = "MoonTau"
+	landmark_tag = "tau_start"
+	base_area = /area/cadiaoutpost/oa/shuttle/tau2
+	base_turf = /turf/simulated/floor/plating
+
+/obj/machinery/computer/shuttle_control/ferry/tau
+	name = "Tau Ship Console"
+	shuttle_tag = "tau1"
+
+
+
+
+/datum/shuttle/autodock/ferry/cargo
+	name = "Cargo1"
+	warmup_time = 10
+	waypoint_station = "cargo_start"
+	waypoint_offsite = "cargo_end"
+	shuttle_area = /area/cadiaoutpost/oa/shuttle/cargo1
+
+/obj/effect/shuttle_landmark/ferry/cargo_end
+	name = "PlanetCargo"
+	landmark_tag = "cargo_end"
+	base_area = /area/cadiaoutpost/oa/shuttle/cargo2
+	base_turf = /turf/simulated/floor/plating
+
+/obj/effect/shuttle_landmark/ferry/cargo_start
+	name = "MoonCargo"
+	landmark_tag = "cargo_start"
+	base_area = /area/cadiaoutpost/oa/shuttle/cargo2
+	base_turf = /turf/simulated/floor/plating
+
+/obj/machinery/computer/shuttle_control/ferry/cargo
+	name = "Cargo Elevator Console"
+	shuttle_tag = "Cargo1"
 
 
 

@@ -130,7 +130,7 @@
 
 /obj/item/projectile/energy/las/lasgun
 	name = "lasbolt"
-	fire_sound='sound/weapons/lasgun.ogg'
+	fire_sound='sound/weapons/gunshot/lasgun1.ogg'
 	wall_hitsound = 'sound/weapons/guns/misc/laser_searwall.ogg'
 	icon_state = "lasbolt"
 	damage = 48
@@ -138,7 +138,7 @@
 
 /obj/item/projectile/energy/las/lasgun/overcharge
 	name = "lasbolt"
-	fire_sound='sound/weapons/lasgun.ogg'
+	fire_sound='sound/weapons/gunshot/lasgun2.ogg'
 	wall_hitsound = 'sound/weapons/guns/misc/laser_searwall.ogg'
 	icon_state = "lasbolt"
 	damage = 71
@@ -146,7 +146,7 @@
 
 /obj/item/projectile/energy/las/lasgun/execution
 	name = "lasbolt"
-	fire_sound='sound/weapons/lasgun.ogg'
+	fire_sound='sound/weapons/gunshot/lasgun2.ogg'
 	wall_hitsound = 'sound/weapons/guns/misc/laser_searwall.ogg'
 	icon_state = "lasbolt"
 	damage = 115
@@ -154,7 +154,7 @@
 
 /obj/item/projectile/energy/las/lasgun/lucius
 	name = "lasbolt"
-	fire_sound='sound/weapons/lasgun.ogg'
+	fire_sound='sound/weapons/gunshot/lasgun1.ogg'
 	wall_hitsound = 'sound/weapons/guns/misc/laser_searwall.ogg'
 	icon_state = "lasbolt"
 	damage = 56
@@ -162,7 +162,7 @@
 
 /obj/item/projectile/energy/las/lasgun/lucius/overcharge
 	name = "lasbolt"
-	fire_sound='sound/weapons/lasgun.ogg'
+	fire_sound='sound/weapons/gunshot/lasgun2.ogg'
 	wall_hitsound = 'sound/weapons/guns/misc/laser_searwall.ogg'
 	icon_state = "lasbolt"
 	damage = 80
@@ -170,7 +170,7 @@
 
 /obj/item/projectile/energy/las/lasgun/longlas
 	name = "lasbolt"
-	fire_sound='sound/weapons/lasgun.ogg'
+	fire_sound='sound/weapons/gunshot/lasgun1.ogg'
 	wall_hitsound = 'sound/weapons/guns/misc/laser_searwall.ogg'
 	icon_state = "lasbolt"
 	damage = 89
@@ -179,7 +179,7 @@
 
 /obj/item/projectile/energy/las/lasgun/longlas/overcharge
 	name = "lasbolt"
-	fire_sound='sound/weapons/lasgun.ogg'
+	fire_sound='sound/weapons/gunshot/lasgun2.ogg'
 	wall_hitsound = 'sound/weapons/guns/misc/laser_searwall.ogg'
 	icon_state = "lasbolt"
 	damage = 130
@@ -187,7 +187,7 @@
 
 /obj/item/projectile/energy/las/lasgun/hotshot
 	name = "lasbolt"
-	fire_sound='sound/weapons/lasgun.ogg'
+	fire_sound='sound/weapons/gunshot/lasgun2.ogg'
 	wall_hitsound = 'sound/weapons/guns/misc/laser_searwall.ogg'
 	icon_state = "lasbolt"
 	damage = 64
@@ -234,21 +234,21 @@
 	fire_sound='sound/weapons/marauder.ogg'
 	wall_hitsound = 'sound/weapons/guns/misc/laser_searwall.ogg'
 	icon_state = "pulse1_bl"
-	damage = 140
-	armor_penetration = 40
+	damage = 160
+	armor_penetration = 30
 
 /obj/item/projectile/energy/pulse/plasmapistol
 	name = "plasma round"
 	fire_sound='sound/weapons/marauder.ogg'
 	wall_hitsound = 'sound/weapons/guns/misc/laser_searwall.ogg'
 	icon_state = "pulse1_bl"
-	damage = 110
-	armor_penetration = 40
+	damage = 140
+	armor_penetration = 30
 
 	/obj/item/projectile/energy/pulse/plasmapistol/astartes
 	name = "plasma round"
 	fire_sound='sound/weapons/marauder.ogg'
 	wall_hitsound = 'sound/weapons/guns/misc/laser_searwall.ogg'
 	icon_state = "pulse1_bl"
-	damage = 130
-	armor_penetration = 40
+	damage = 150
+	armor_penetration = 30

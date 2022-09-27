@@ -481,19 +481,19 @@ obj/item/clothing/suit/armor
 	icon_state = "Judge"
 	item_state = "Judge"
 	allowed = list(/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/cell,/obj/item/gun/energy/las/lasgun)
-	armor = list(melee = 40, bullet = 40, laser = 35, energy = 25, bomb = 30, bio = 20, rad = 20) 
+	armor = list(melee = 40, bullet = 40, laser = 35, energy = 25, bomb = 30, bio = 20, rad = 20)
 	sales_price = 20
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 	cold_protection = UPPER_TORSO | LOWER_TORSO | LEGS | FEET | ARMS | HANDS
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 
-/obj/item/clothing/suit/armor/enforcer 
+/obj/item/clothing/suit/armor/enforcer
 	name = "Patrol Jacket"
 	desc = "The flak jacket worn by a Messina Enforcer. Light and robust in the colour black, designed to protect against blast and small arms fire."
 	icon_state = "towntrench_medium"
 	item_state = "towntrench_medium"
 	allowed = list(/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/cell,/obj/item/gun/energy/las/lasgun)
-	armor = list(melee = 40, bullet = 40, laser = 35, energy = 25, bomb = 30, bio = 20, rad = 20) 
+	armor = list(melee = 40, bullet = 40, laser = 35, energy = 25, bomb = 30, bio = 20, rad = 20)
 	sales_price = 20
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 	cold_protection = UPPER_TORSO | LOWER_TORSO | LEGS | FEET | ARMS | HANDS
@@ -907,9 +907,60 @@ obj/item/clothing/suit/armor
 // ADEPTA SORORITAS
 /obj/item/clothing/suit/sisterofbattle
 	name = "Order of the Sacred Rose Power Armor"
-	desc = "The Sacred and holy Power Armour adorned by Battle Sister of the Order Of The Sacred Rose, It's illuminate the field with it glorious light, Being near it make you feels safer and secured."
+	desc = "The Sacred and holy Power Armour adorned by Battle Sister of the Order Of The Sacred Rose, It illuminates the field with it glorious light, Being near it make you feels safer and secured."
 	icon_state = "sister"
 	item_state = "sister"
+	armor = list(melee = 85, bullet = 85, laser = 80, energy = 90, bomb = 60, bio = 100, rad = 100) //its essentially light powerarmor, a bit weaker than assfartez.
+	sales_price = 120
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET
+	cold_protection = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE
+	flags_inv = HIDEJUMPSUIT
+	canremove = 1
+	species_restricted = list(SPECIES_HUMAN)
+/obj/item/clothing/suit/sisterofbattle/New()
+	..()
+	slowdown_per_slot[slot_wear_suit] = -0.5
+
+/obj/item/clothing/suit/sisterofbattle/repentia
+	name = "Garb of the Repentia"
+	desc = "The tattered garb of a penitent sister of battle. The lack of armor is a symbol of their faith on the Repentia's deathmarch towards a glorious end."
+	icon_state = "repentia_chest"
+	item_state = "repentia_chest"
+	armor = list(melee = 75, bullet = 65, laser = 60, energy = 90, bomb = 60, bio = 100, rad = 100) //its essentially light powerarmor, a bit weaker than assfartez.
+	sales_price = 120
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
+	cold_protection = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE
+	flags_inv = HIDEJUMPSUIT
+	canremove = 1
+	species_restricted = list(SPECIES_HUMAN)
+
+/obj/item/clothing/suit/sisterofbattle/mlsister
+	name = "Order of Our Martyred Lady Power Armor"
+	desc = "The Sacred and holy Power Armour adorned by Battle Sister of the Order Of Our Martyred Lady. Being near it make you feels safer and secured."
+	icon_state = "mlsister"
+	item_state = "mlsister"
+	armor = list(melee = 85, bullet = 85, laser = 80, energy = 90, bomb = 60, bio = 100, rad = 100) //its essentially light powerarmor, a bit weaker than assfartez.
+	sales_price = 120
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET
+	cold_protection = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+	max_heat_protection_temperature = SPACE_SUIT_MAX_HEAT_PROTECTION_TEMPERATURE
+	flags_inv = HIDEJUMPSUIT
+	canremove = 1
+	species_restricted = list(SPECIES_HUMAN)
+/obj/item/clothing/suit/sisterofbattle/New()
+	..()
+	slowdown_per_slot[slot_wear_suit] = -0.5
+
+/obj/item/clothing/suit/sisterofbattle/brsister
+	name = "Order of the Bloody Rose Power Armor"
+	desc = "The blood red power armor of The Order of the Bloody Rose."
+	icon_state = "brsister"
+	item_state = "brsister"
 	armor = list(melee = 85, bullet = 85, laser = 80, energy = 90, bomb = 60, bio = 100, rad = 100) //its essentially light powerarmor, a bit weaker than assfartez.
 	sales_price = 120
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET
@@ -1005,7 +1056,7 @@ obj/item/clothing/suit/armor
 	sales_price = 30
 /obj/item/clothing/suit/armor/heavyflaksuit/New()
 	..()
-	slowdown_per_slot[slot_wear_suit] = 1.2
+	slowdown_per_slot[slot_wear_suit] = 0.5
 
 /obj/item/clothing/suit/armor/fraterisarmor
 	name = "Frateris Robes"
@@ -1030,7 +1081,7 @@ obj/item/clothing/suit/armor
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 /obj/item/clothing/suit/armor/trinet/New()
 	..()
-	slowdown_per_slot[slot_wear_suit] = 0.6
+	slowdown_per_slot[slot_wear_suit] = 0.3
 
 /obj/item/clothing/suit/armor/breastplate
 	name = "Iron Breastplate"
@@ -1044,7 +1095,7 @@ obj/item/clothing/suit/armor
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 /obj/item/clothing/suit/armor/breastplate/New()
 	..()
-	slowdown_per_slot[slot_wear_suit] = 0.4
+	slowdown_per_slot[slot_wear_suit] = 0.2
 
 /obj/item/clothing/suit/armor/heavyduster
 	name = "Mysterious Duster"
@@ -1070,7 +1121,7 @@ obj/item/clothing/suit/armor
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 /obj/item/clothing/suit/armor/iplate/New()
 	..()
-	slowdown_per_slot[slot_wear_suit] = 1
+	slowdown_per_slot[slot_wear_suit] = 0.4
 
 /obj/item/clothing/suit/armor/templar
 	name = "Full Plate Armor"
@@ -1084,7 +1135,7 @@ obj/item/clothing/suit/armor
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 /obj/item/clothing/suit/armor/templar/New()
 	..()
-	slowdown_per_slot[slot_wear_suit] = 1
+	slowdown_per_slot[slot_wear_suit] = 0.4
 
 /obj/item/clothing/suit/armor/knighthosp
 	name = "Frateris Plate"
@@ -1098,7 +1149,7 @@ obj/item/clothing/suit/armor
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 /obj/item/clothing/suit/armor/knighthosp/New()
 	..()
-	slowdown_per_slot[slot_wear_suit] = 0.5
+	slowdown_per_slot[slot_wear_suit] = 0.3
 
 /obj/item/clothing/suit/armor/hauberk
 	name = "Hauberk"
@@ -1112,7 +1163,7 @@ obj/item/clothing/suit/armor
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 /obj/item/clothing/suit/armor/hauberk/New()
 	..()
-	slowdown_per_slot[slot_wear_suit] = 0.4
+	slowdown_per_slot[slot_wear_suit] = 0.2
 
 /obj/item/clothing/suit/armor/slaverobe
 	name = "Serf Robes"
@@ -1140,7 +1191,7 @@ obj/item/clothing/suit/armor
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 /obj/item/clothing/suit/armor/armoredtrench/New()
 	..()
-	slowdown_per_slot[slot_wear_suit] = 0.5
+	slowdown_per_slot[slot_wear_suit] = 0.4
 
 /obj/item/clothing/suit/armor/vanpa
 	name = "Van Saar Power Armor"
@@ -1155,7 +1206,7 @@ obj/item/clothing/suit/armor
 	sales_price = 80
 /obj/item/clothing/suit/armor/vanpa/New()
 	..()
-	slowdown_per_slot[slot_wear_suit] = 1.2
+	slowdown_per_slot[slot_wear_suit] = 0.6
 
 /obj/item/clothing/suit/armor/berserker
 	name = "Berserker Power Armor"
@@ -1185,7 +1236,7 @@ obj/item/clothing/suit/armor
 	sales_price = 20
 /obj/item/clothing/suit/armor/goliathplate/New()
 	..()
-	slowdown_per_slot[slot_wear_suit] = 1.1
+	slowdown_per_slot[slot_wear_suit] = 0.4
 
 /obj/item/clothing/suit/armor/goliatharmor
 	name = "Raider Cuirass"
@@ -1199,7 +1250,7 @@ obj/item/clothing/suit/armor
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 /obj/item/clothing/suit/armor/goliatharmor/New()
 	..()
-	slowdown_per_slot[slot_wear_suit] = 0.4
+	slowdown_per_slot[slot_wear_suit] = 0.3
 
 /obj/item/clothing/suit/armor/sniper
 	name = "Ghillie Suit"
@@ -1225,7 +1276,7 @@ obj/item/clothing/suit/armor
 	sales_price = 10
 
 /obj/item/clothing/suit/armor/seolsuit
-	name = "Seolite Anomaly Suit" 
+	name = "Seolite Anomaly Suit"
 	desc = "Forged by the strange xenos of this barren ice-world, it seeems to have an advanced protective field wrapping around it."
 	icon_state = "spacer"
 	item_state = "spacer"
@@ -1238,7 +1289,7 @@ obj/item/clothing/suit/armor
 	sales_price = 60
 /obj/item/clothing/suit/armor/seolsuit/New()
 	..()
-	slowdown_per_slot[slot_wear_suit] = 1.4
+	slowdown_per_slot[slot_wear_suit] = 0.8
 
 /obj/item/clothing/suit/armor/flak1
 	name = "Necromundan Flak Armor"
@@ -1310,7 +1361,7 @@ obj/item/clothing/suit/armor
 	sales_price = 35
 /obj/item/clothing/suit/armor/carapace4/New()
 	..()
-	slowdown_per_slot[slot_wear_suit] = 0.4
+	slowdown_per_slot[slot_wear_suit] = 0.3
 
 /obj/item/clothing/suit/armor/goliath2
 	name = "Goliath Flak Armor"
@@ -1325,7 +1376,7 @@ obj/item/clothing/suit/armor
 	sales_price = 15
 /obj/item/clothing/suit/armor/goliath2/New()
 	..()
-	slowdown_per_slot[slot_wear_suit] = 0.4
+	slowdown_per_slot[slot_wear_suit] = 0.3
 
 /obj/item/clothing/suit/armor/greypa
 	name = "Mechanicus Power Armour"
@@ -1355,7 +1406,7 @@ obj/item/clothing/suit/armor
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS|HANDS|FEET
 /obj/item/clothing/suit/armor/rpowerarmor/New()
 	..()
-	slowdown_per_slot[slot_wear_suit] = 0.6
+	slowdown_per_slot[slot_wear_suit] = 0.5
 
 /obj/item/clothing/suit/armor/scum2
 	name = "Mysterious Garb"
@@ -1472,7 +1523,7 @@ obj/item/clothing/suit/armor
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 /obj/item/clothing/suit/armor/goliath2/New()
 	..()
-	slowdown_per_slot[slot_wear_suit] = 0.6
+	slowdown_per_slot[slot_wear_suit] = 0.4
 
 /obj/item/clothing/suit/armor/tduster
 	name = "Armored Duster"
@@ -1496,10 +1547,64 @@ obj/item/clothing/suit/armor
 	cold_protection = UPPER_TORSO | LOWER_TORSO | LEGS | FEET | ARMS | HANDS
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 
+// ARMORS PHASE TWO
+
+/obj/item/clothing/suit/armor/necromundaflak1
+	name = "Heavy Flak Armor"
+	desc = "Unmarked heavy flak armor manufactured by the underhives of Necromunda."
+	icon_state = "necromundaflak"
+	item_state = "necromundaflak"
+	armor = list(melee = 40, bullet = 48, laser = 48, energy = 25, bomb = 40, bio = 30, rad = 30)
+	allowed = list(/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/cell,/obj/item/gun/energy/las/lasgun)
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
+	cold_protection = UPPER_TORSO | LOWER_TORSO | LEGS | FEET | ARMS | HANDS
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+	sales_price = 15
+/obj/item/clothing/suit/armor/necromundaflak1/New()
+	..()
+	slowdown_per_slot[slot_wear_suit] = 0.3
+
+/obj/item/clothing/suit/armor/necromundacarapace1
+	name = "Heavy Carapace Armor"
+	desc = "Unmarked heavy flak armor manufactured by the underhives of Necromunda."
+	icon_state = "necromundacarapace"
+	item_state = "necromundacarapace"
+	armor = list(melee = 48, bullet = 58, laser = 58, energy = 25, bomb = 48, bio = 30, rad = 30)
+	allowed = list(/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/cell,/obj/item/gun/energy/las/lasgun)
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
+	cold_protection = UPPER_TORSO | LOWER_TORSO | LEGS | FEET | ARMS | HANDS
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+	sales_price = 31
+/obj/item/clothing/suit/armor/necromundacarapace1/New()
+	..()
+	slowdown_per_slot[slot_wear_suit] = 0.4
+
+/obj/item/clothing/suit/armor/ranger2
+	name = "Colonial Duster"
+	desc = "A duster with a flak plate insert, sewn together with grox leather."
+	icon_state = "ranger2"
+	item_state = "ranger2"
+	armor = list(melee = 41, bullet = 46, laser = 43, energy = 25, bomb = 25, bio = 30, rad = 31)
+	allowed = list(/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/cell,/obj/item/gun/energy/las/lasgun)
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+	cold_protection = UPPER_TORSO | LOWER_TORSO | LEGS | FEET | ARMS | HANDS
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+
+/obj/item/clothing/suit/armor/ranger3
+	name = "Ganger Duster"
+	desc = "A duster with a flak plate insert, sewn together with grox leather."
+	icon_state = "ranger3"
+	item_state = "ranger3"
+	armor = list(melee = 51, bullet = 41, laser = 35, energy = 25, bomb = 25, bio = 40, rad = 39)
+	allowed = list(/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/cell,/obj/item/gun/energy/las/lasgun)
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO
+	cold_protection = UPPER_TORSO | LOWER_TORSO | LEGS | FEET | ARMS | HANDS
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+
 // admeme only
 
 /obj/item/clothing/suit/armor/ogryn1 // only give this to ogryns. it cannot be removed and has head protection.
-	name = "Ogryn Armor" 
+	name = "Ogryn Armor"
 	desc = "Protects ya stomach from dem flashie stingy things."
 	icon_state = "ogryn1"
 	item_state = "ogryn1"
@@ -1538,3 +1643,20 @@ obj/item/clothing/suit/armor
 /obj/item/clothing/suit/armor/shadowbeast/New()
 	..()
 	slowdown_per_slot[slot_wear_suit] = -1
+
+/obj/item/clothing/suit/armor/vindicare
+	name = "Vindicare armour"
+	desc = "The armoured bodysuit of a Vindicare assassin."
+	armor = list(melee = 20, bullet = 95, laser = 95, energy = 95, bomb = 20, bio = 100, rad = 100)
+	icon_state = "s-ninja"
+	item_state = "s-ninja"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS|HANDS|FEET
+	cold_protection = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
+	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
+	str_requirement = 18
+	canremove = 0
+	siemens_coefficient = 0
+	sales_price = 250
+/obj/item/clothing/suit/armor/vindicare/New()
+	..()
+	slowdown_per_slot[slot_wear_suit] = -1.5

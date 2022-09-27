@@ -12,6 +12,7 @@ var/global/list/sparring_attack_cache = list()
 	var/edge = 0
 	var/delay = 10 //Used to be 0. Slightly faster than hitting with a weapon.
 
+	var/damtype = BRUTE
 	var/deal_halloss
 	var/sparring_variant_type = /datum/unarmed_attack/light_strike
 
@@ -133,14 +134,13 @@ var/global/list/sparring_attack_cache = list()
 	shredding = 1
 	damage = 25
 	sharp = 1
-	edge = 1
 
 /datum/unarmed_attack/punch
 	attack_verb = list("punched")
 	attack_noun = list("fist")
 	eye_attack_text = "fingers"
 	eye_attack_text_victim = "digits"
-	damage = 10
+	damage = 18
 
 /datum/unarmed_attack/punch/show_attack(var/mob/living/carbon/human/user, var/mob/living/carbon/human/target, var/zone, var/attack_damage)
 	var/obj/item/organ/external/affecting = target.get_organ(zone)
@@ -184,7 +184,7 @@ var/global/list/sparring_attack_cache = list()
 	attack_noun = list("fist")
 	eye_attack_text = "fingers"
 	eye_attack_text_victim = "digits"
-	damage = 40
+	damage = 50
 	
 /datum/unarmed_attack/kick
 	attack_verb = list("kicked", "kicked", "kicked", "kneed")
@@ -227,13 +227,13 @@ var/global/list/sparring_attack_cache = list()
 	attack_verb = list("kicked", "kicked", "kicked", "kneed")
 	attack_noun = list("kick", "kick", "kick", "knee strike")
 	attack_sound = "swing_hit"
-	damage = 45
+	damage = 55
 
 /datum/unarmed_attack/stomp
 	attack_verb = list("stomped on")
 	attack_noun = list("stomp")
 	attack_sound = "swing_hit"
-	damage = 50
+	damage = 55
 
 /datum/unarmed_attack/stomp/is_usable(var/mob/living/carbon/human/user, var/mob/living/carbon/human/target, var/zone)
 	if(!istype(target))
@@ -278,7 +278,7 @@ var/global/list/sparring_attack_cache = list()
 	attack_verb = list("stomped on")
 	attack_noun = list("stomp")
 	attack_sound = "swing_hit"
-	damage = 60
+	damage = 70
 
 
 /datum/unarmed_attack/light_strike
@@ -297,8 +297,9 @@ var/global/list/sparring_attack_cache = list()
 	attack_noun = list("claw")
 	eye_attack_text = "blades"
 	eye_attack_text_victim = "daggers"
-	damage = 75
+	damage = 95
 	sharp = 1
+	edge = 1
 	attack_sound = 'sound/effects/nidslash.ogg'
 
 
@@ -336,3 +337,13 @@ var/global/list/sparring_attack_cache = list()
 					if(50 to 55)	user.visible_message("<span class='danger'>[user] tears apart [target]'s [organ]!</span>")
 	else
 		user.visible_message("<span class='danger'>[user] [pick("slashed", "flailed a claw at", "scythed", "impaled their [pick(attack_noun)] into")] [target]'s [organ]!</span>") //why do we have a separate set of verbs for lying targets?
+
+/datum/unarmed_attack/eversorclaw
+	attack_verb = list("stabs")
+	attack_noun = list("claws")
+	eye_attack_text = "blades"
+	eye_attack_text_victim = "daggers"
+	damage = 100
+	sharp = 1
+	attack_sound = 'sound/effects/nidslash.ogg'
+	damtype = TOX

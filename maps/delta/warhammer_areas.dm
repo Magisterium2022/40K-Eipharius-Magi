@@ -357,37 +357,37 @@ Area basic template
 /area/cadiaoutpost/oa/hallway
 	name = "Hallway"
 	icon_state = "yellow"
-	requires_power = TRUE
+	requires_power = FALSE
 	music = 'sound/newmusic/Outpost1.ogg'
 
 /area/cadiaoutpost/oa/hallway/northern
 	name = "Northern Hallway"
 	icon_state = "halln"
-	requires_power = TRUE
+	requires_power = FALSE
 	music = 'sound/newmusic/Outpost1.ogg'
 
 /area/cadiaoutpost/oa/hallway/eastern
 	name = "Eastern Hallway"
 	icon_state = "halle"
-	requires_power = TRUE
+	requires_power = FALSE
 	music = 'sound/newmusic/Outpost1.ogg'
 
 /area/cadiaoutpost/oa/hallway/southern
 	name = "Southern Hallway"
 	icon_state = "halls"
-	requires_power = TRUE
+	requires_power = FALSE
 	music = 'sound/newmusic/Outpost1.ogg'
 
 /area/cadiaoutpost/oa/hallway/western
 	name = "Western Hallway"
 	icon_state = "hallw"
-	requires_power = TRUE
+	requires_power = FALSE
 	music = 'sound/newmusic/Outpost1.ogg'
 
 /area/cadiaoutpost/oa/hallway/centralhall
 	name = "Inner Hallway"
 	icon_state = "hallC1"
-	requires_power = TRUE
+	requires_power = FALSE
 	music = 'sound/newmusic/Outpost1.ogg'
 
 //////////////////////////////////////
@@ -533,8 +533,14 @@ Area basic template
 /area/cadiaoutpost/oa/hangarpact
 	name = "Pact Hangar"
 	icon_state = "red"
-	music = 'sound/newmusic/Outpost1.ogg'
+	music = 'sound/newmusic/Lab_Experiment.ogg'
 	requires_power = FALSE
+
+/area/cadiaoutpost/oa/shuttle/cargo2
+	name = "Cargo Elevator"
+	icon_state = "shuttle"
+	music = 'sound/newmusic/General_Ambient2.ogg'
+	requires_power = 0
 
 /////////////////////////////////////////
 ////////////////Engineering/////////////
@@ -918,18 +924,18 @@ Area basic template
 /area/cadiaoutpost/oa/caves/dark
 	name = "Caves Dark" // Powered areas of the city.
 	icon_state = "cave"
-	music = 'sound/newmusic/Caves_City.ogg'
+	music = 'sound/newmusic/Caves_Dark.ogg'
 	requires_power = FALSE
 
 /area/cadiaoutpost/oa/caves/undercity
 	name = "Caves Undercity" // Undercity ambience.
 	icon_state = "cave"
-	music = 'sound/newmusic/Caves_City.ogg'
+	music = 'sound/newmusic/Caves_Dark.ogg'
 
 /area/cadiaoutpost/oa/caves/terror
 	name = "Caves Terror" // Do not use this area unless you know what it's for.
 	icon_state = "cave"
-	music = 'sound/newmusic/Caves_City.ogg'
+	music = 'sound/newmusic/Caves_Dark.ogg'
 
 ////////////////////////////////////////
 //////////VILLAGE//////////////////
@@ -944,7 +950,7 @@ Area basic template
 /area/cadiaoutpost/oa/villageinside
 	name = "Inside Village"
 	icon_state = "village"
-	music = 'sound/newmusic/VillageInside.ogg'
+	music = 'sound/newmusic/General_Ambient2.ogg'
 	requires_power = FALSE
 	dynamic_lighting = 1
 
@@ -961,7 +967,7 @@ Area basic template
 /area/cadiaoutpost/oa/gatehouse
 	name = "Gatehouse"
 	icon_state = "gatehouse"
-	requires_power = TRUE
+	requires_power = FALSE
 	dynamic_lighting = 1
 	music = 'sound/newmusic/General_Ambient2.ogg'
 
@@ -1006,7 +1012,7 @@ Area basic template
 /area/cadiaoutpost/oa/theforest
 	name = "The Forest"
 	icon_state = "forest"
-	requires_power = FALSE
+	requires_power = TRUE
 	dynamic_lighting = 1
 	music = 'sound/newmusic/General_Ambient2.ogg'
 
@@ -1471,7 +1477,25 @@ Area basic template
 /area/cadiaoutpost/oa/shuttle/inquisitionpact
 	name = "Pact Ship"
 	icon_state = "shuttle"
-	music = 'sound/newmusic/Outpost1.ogg'
+	music = 'sound/newmusic/Lab_Experiment.ogg'
+	requires_power = 0
+
+/area/cadiaoutpost/oa/shuttle/tau1
+	name = "Tau Ship"
+	icon_state = "shuttle"
+	music = 'sound/newmusic/Lab_Experiment.ogg'
+	requires_power = 0
+
+/area/cadiaoutpost/oa/shuttle/tau2
+	name = "Tau Hangar"
+	icon_state = "red"
+	music = 'sound/newmusic/Lab_Experiment.ogg'
+	requires_power = FALSE
+
+/area/cadiaoutpost/oa/shuttle/cargo1
+	name = "Cargo Elevator"
+	icon_state = "shuttle"
+	music = 'sound/newmusic/General_Ambient2.ogg'
 	requires_power = 0
 
 /area/cadiaoutpost/oa/shuttle/aquila

@@ -13,7 +13,7 @@
 
 /datum/cargo_entry/misc/vatboy
 	name = "Vat-Grown Human"
-	cost = 100
+	cost = 250
 	item_path = /obj/structure/closet/crate/vatgrownboy
 
 /datum/cargo_entry/misc/smokes
@@ -40,3 +40,8 @@
 	name = "Shovel"
 	cost = 5
 	item_path = /obj/item/shovel
+
+/datum/cargo_entry/misc/ingotshaping
+	name = "Ingot shaping tools"
+	cost = 30
+	item_path = /obj/structure/closet/crate/ingotshaping

@@ -37,7 +37,7 @@
 	latejoin_at_spawnpoints = 1
 	announced = 0
 	species_role = "Astartes"
-	cultist_chance = 10
+	cultist_chance = 4
 
 	equip(var/mob/living/carbon/human/H)
 		var/current_name = H.real_name
@@ -61,7 +61,7 @@
 		/mob/living/carbon/human/proc/astatoglory,
 		/mob/living/carbon/human/proc/astaxenos)
 		H.verbs -= list(/mob/living/carbon/human/verb/emoteemperorprotects)
-		H.add_stats(30, rand(25,30), rand(25,30), rand(20,30)) //genuinely no idea what to make their stats
+		H.add_stats(28, rand(20,26), rand(22,26), rand(17,24)) //genuinely no idea what to make their stats
 		H.add_skills(11,11,11,11,11)
 /*switch(title) //either you get this to work or you dont change it, ok?
 			if("Blood Angel Tactical Marine")

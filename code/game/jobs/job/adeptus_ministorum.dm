@@ -24,6 +24,7 @@
 	shotgun_skill = 4
 	lmg_skill = 4
 	smg_skill = 4
+	cultist_chance = 30
 
 
 
@@ -35,6 +36,7 @@
 		H.add_skills(rand(8,10),rand(5,6),rand(5,7),3,rand(4,7)) //melee, ranged, med, eng, surgery
 		H.get_idcard()?.access = list(access_heads, access_security, access_sec_doors, access_brig, access_forensics_lockers, access_all_personal_lockers, access_maint_tunnels, access_sob,)
 		H.warfare_language_shit(LANGUAGE_HIGH_GOTHIC)
+		H.adjustStaminaLoss(-INFINITY)
 		H.warfare_faction = IMPERIUM
 		to_chat(H, "<span class='notice'><b><font size=3>You are the Ecclesiarch Deacon. You are one of the Imperial Cult's priesthood, your oratory skills can stir entire crowds of the faithful and turn a coward into a zealot. You often work on worlds where faith is lacking, and people are rebellious. It is your job to spread the Imperial Cult to this new colony and it's ignorant masses, bringing their backwards beliefs in line with the faith of the God Emperor, as well as guiding the already faithful.</font></b></span>")
 
@@ -206,6 +208,11 @@
 	selection_color = "#FCFBFA"
 	announced = FALSE
 	outfit_type = /decl/hierarchy/outfit/job/sisterofbattle
+	alt_titles = list(
+	"Sister Repentia" = /decl/hierarchy/outfit/job/sisterofbattle/repentia,
+	"Order of the Bloody Rose" = /decl/hierarchy/outfit/job/sisterofbattle/brsister,
+	"Order of Our Martyred Lady" = /decl/hierarchy/outfit/job/sisterofbattle/mlsister,
+		)
 	auto_rifle_skill = 10
 	semi_rifle_skill = 10
 	sniper_skill = 10
@@ -219,12 +226,13 @@
 		H.fully_replace_character_name("Sister [current_name]")
 		H.set_trait(new/datum/trait/death_tolerant)
 		H.set_quirk(new/datum/quirk/dead_inside) // the only thing the sisters of the orders millitant feel is the god emperor's light.
-		H.add_stats(rand(18,22), rand(18,22), rand(18,22), 16)
+		H.add_stats(rand(18,22), rand(18,20), rand(18,20), 13)
 		H.add_skills(rand(9,13),rand(9,13),rand(6,8),rand(3,7),rand(4,7)) //melee, ranged, med, eng, surgery
 		H.get_idcard()?.access = list(access_heads, access_security, access_sec_doors, access_brig, access_forensics_lockers, access_all_personal_lockers, access_maint_tunnels, access_sob,)
 		H.get_equipped_item(slot_s_store)
 		H.warfare_faction = IMPERIUM
 		H.gender = FEMALE
+		H.adjustStaminaLoss(-INFINITY)
 		H.warfare_language_shit(LANGUAGE_LOW_GOTHIC)
 		H.warfare_language_shit(LANGUAGE_HIGH_GOTHIC)
 		H.f_style = "shaved"
@@ -244,8 +252,7 @@
 		H.verbs -= list(/mob/living/carbon/human/verb/emoteemperorprotects)
 		to_chat(H, "<span class='notice'><b><font size=3>You are a Sister of Battle belonging to the Order of the Sacred Rose assigned to the Monastary, you serve both the Inquisition and Ecclesiarchy directly, though whom you truly serve is that of The Emperor who stands above all. Once you were a Sister Repentia, who through incredible miracles and valor achieved rank once again within the Order, revered as a tale for years among your peers as a war hero made pure by the Emperor's embrace.</font></b></span>")
 
-
-//outfit
+//SOB outfits
 
 /decl/hierarchy/outfit/job/sisterofbattle
 	name = OUTFIT_JOB_NAME("Sister of Battle")
@@ -269,6 +276,75 @@
 	/obj/item/device/flashlight/lantern = 1,
 	/obj/item/stack/thrones3/ten = 2
 	)
+
+/decl/hierarchy/outfit/job/sisterofbattle/repentia
+	name = OUTFIT_JOB_NAME("Sister Repentia")
+	head = /obj/item/clothing/head/helmet/sisterofbattle/repentia
+	l_ear = /obj/item/device/radio/headset/heads/cmo
+	neck = /obj/item/reagent_containers/food/drinks/canteen
+	suit = /obj/item/clothing/suit/sisterofbattle/repentia
+	uniform = /obj/item/clothing/under/guard/uniform/sisterofbattle/repentia
+	back = /obj/item/storage/backpack/satchel/warfare
+	shoes = /obj/item/clothing/shoes/jackboots/sisterofbattle/repentia
+	id_type = /obj/item/card/id/dog_tag
+	l_pocket = /obj/item/storage/box/ifak
+	l_hand = /obj/item/melee/chain/mercycs
+	r_hand = /obj/item/gun/projectile/automatic/flamer
+	backpack_contents = list(
+	/obj/item/ammo_magazine/flamer = 3,
+	/obj/item/reagent_containers/food/snacks/warfare = 1,
+	/obj/item/clothing/mask/gas/explorer = 1,
+	/obj/item/device/flashlight/lantern = 1,
+	)
+
+
+/decl/hierarchy/outfit/job/sisterofbattle/mlsister
+	name = OUTFIT_JOB_NAME("Order of Our Martyred Lady")
+	head = /obj/item/clothing/head/helmet/sisterofbattle/mlsister
+	l_ear = /obj/item/device/radio/headset/heads/cmo
+	neck = /obj/item/reagent_containers/food/drinks/canteen
+	suit = /obj/item/clothing/suit/sisterofbattle/mlsister
+	uniform = /obj/item/clothing/under/guard/uniform/sisterofbattle
+	back = /obj/item/storage/backpack/satchel/warfare/sisterofbattle/mlsister
+	gloves = /obj/item/clothing/gloves/sisterofbattle/mlsister
+	shoes = /obj/item/clothing/shoes/jackboots/sisterofbattle/mlsister
+	id_type = /obj/item/card/id/dog_tag
+	l_pocket = /obj/item/storage/box/ifak
+	l_hand = /obj/item/gun/projectile/sisterbolter
+	r_hand = /obj/item/gun/projectile/bolter_pistol/sisterofbattle
+	backpack_contents = list(
+	/obj/item/ammo_magazine/bolt_rifle_magazine/sister = 4,
+	/obj/item/ammo_magazine/bolt_pistol_magazine = 3,
+	/obj/item/reagent_containers/food/snacks/warfare = 1,
+	/obj/item/clothing/mask/gas/explorer = 1,
+	/obj/item/device/flashlight/lantern = 1,
+	/obj/item/stack/thrones3/ten = 2
+	)
+
+/decl/hierarchy/outfit/job/sisterofbattle/brsister
+	name = OUTFIT_JOB_NAME("Order of the Bloody Rose")
+	head = /obj/item/clothing/head/helmet/sisterofbattle/brsister
+	l_ear = /obj/item/device/radio/headset/heads/cmo
+	neck = /obj/item/reagent_containers/food/drinks/canteen
+	suit = /obj/item/clothing/suit/sisterofbattle/brsister
+	uniform = /obj/item/clothing/under/guard/uniform/sisterofbattle
+	back = /obj/item/storage/backpack/satchel/warfare/sisterofbattle/brsister
+	gloves = /obj/item/clothing/gloves/sisterofbattle/brsister
+	shoes = /obj/item/clothing/shoes/jackboots/sisterofbattle/brsister
+	id_type = /obj/item/card/id/dog_tag
+	l_pocket = /obj/item/storage/box/ifak
+	l_hand = /obj/item/gun/projectile/sisterbolter
+	r_hand = /obj/item/melee/chain/inqcs
+	backpack_contents = list(
+	/obj/item/ammo_magazine/bolt_rifle_magazine/sister = 4,
+	/obj/item/reagent_containers/food/snacks/warfare = 1,
+	/obj/item/clothing/mask/gas/explorer = 1,
+	/obj/item/device/flashlight/lantern = 1,
+	/obj/item/stack/thrones3/ten = 2
+	)
+
+//
+
 
 /decl/hierarchy/outfit/job/progena
 	name = OUTFIT_JOB_NAME("Progena")
@@ -333,9 +409,11 @@
 			access_keycard_auth, access_sec_doors, access_psychiatrist, access_eva, access_maint_tunnels, access_external_airlocks, access_sob)
 		H.warfare_language_shit(LANGUAGE_LOW_GOTHIC)
 		H.warfare_language_shit(LANGUAGE_HIGH_GOTHIC)
+		H.adjustStaminaLoss(-INFINITY)
 		H.f_style = "shaved"
 		H.h_style = "Bob"
 
+		to_chat(H, "<span class='notice'><b><font size=3>http://is12wiki.xyz/index.php/Guide_to_Medicine</font></b></span>")
 		to_chat(H, "<span class='notice'><b><font size=3>You are the pinnacle of knowledge and piety within The Monastery, organize your sisters and ensure they are doing their duty to both The Deacon and the Codex Sororitas. Ensure your pupils within the Schola are carefully selected for their roles in serving either the military or medical wings of the Sororitas.</font></b></span>")
 
 // Hospitaller Advance
@@ -363,6 +441,7 @@
 	shotgun_skill = 7
 	lmg_skill = 7
 	smg_skill = 7
+	cultist_chance = 5
 
 	equip(var/mob/living/carbon/human/H)
 		var/current_name = H.real_name
@@ -374,12 +453,14 @@
 		H.get_idcard()?.access = list(access_medical, access_medical_equip, access_morgue, access_chemistry, access_virology, access_surgery, access_psychiatrist, access_eva, access_maint_tunnels, access_external_airlocks)
 		H.warfare_language_shit(LANGUAGE_LOW_GOTHIC )
 		H.warfare_language_shit(LANGUAGE_HIGH_GOTHIC)
+		H.adjustStaminaLoss(-INFINITY)
 		H.get_equipped_item(slot_s_store)
 		H.gender = FEMALE
 		H.warfare_faction = IMPERIUM
 		H.f_style = "shaved"
 		H.h_style = "Bob"
 
+		to_chat(H, "<span class='notice'><b><font size=3>http://is12wiki.xyz/index.php/Guide_to_Medicine</font></b></span>")
 		to_chat(H, "<span class='notice'><b><font size=3>You are a senior sister of the Ordos Hospitaller, serving under The Deacon/Abbess to maintain the health and divinity of the township.</font></b></span>")
 
 
@@ -400,12 +481,13 @@
 	access = list(access_medical, access_medical_equip, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics, access_maint_tunnels, 211)
 	minimal_access = list(access_medical, access_medical_equip, access_morgue, access_surgery, access_virology, access_maint_tunnels)
 	outfit_type = /decl/hierarchy/outfit/job/progena
-	auto_rifle_skill = 5
-	semi_rifle_skill = 5
-	sniper_skill = 5
-	shotgun_skill = 5
-	lmg_skill = 5
-	smg_skill = 5
+	auto_rifle_skill = 7
+	semi_rifle_skill = 7
+	sniper_skill = 7
+	shotgun_skill = 7
+	lmg_skill = 7
+	smg_skill = 7
+	cultist_chance = 15
 
 	equip(var/mob/living/carbon/human/H)
 		var/current_name = H.real_name
@@ -417,9 +499,11 @@
 		H.get_idcard()?.access = list(access_medical, access_medical_equip, access_morgue, access_chemistry, access_virology, access_surgery, access_psychiatrist, access_eva, access_maint_tunnels, access_external_airlocks)
 		H.warfare_language_shit(LANGUAGE_LOW_GOTHIC )
 		H.warfare_language_shit(LANGUAGE_HIGH_GOTHIC)
+		H.adjustStaminaLoss(-INFINITY)
 		H.get_equipped_item(slot_s_store)
 		H.warfare_faction = IMPERIUM
 
+		to_chat(H, "<span class='notice'><b><font size=3>http://is12wiki.xyz/index.php/Guide_to_Medicine</font></b></span>")
 		to_chat(H, "<span class='notice'><b><font size=3>You are a recent arrival to the Monastery Scholam... soon you will begin your training with the sisters of the Ordos and the monks of the Ecclesiarchy, you stand at a crossroads where in which your failures and triumphs shall decide who you will become for the rest of your days. Do as you are instructed, learn from your masters and serve the God Emperor of Mankind.</font></b></span>")
 
 //Hospitaller

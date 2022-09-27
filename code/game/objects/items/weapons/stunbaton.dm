@@ -6,7 +6,7 @@
 	icon_state = "telebaton_1"
 	item_state = "baton"
 	slot_flags = SLOT_BELT
-	force = 5	
+	force = 5
 	sharp = 0
 	edge = 0
 	throwforce = 7
@@ -265,16 +265,20 @@
 	color = "#292929"
 	slot_flags = SLOT_BELT|SLOT_BACK|SLOT_S_STORE
 	str_requirement = 1
-	force = 1
+	force = 2
 	stunforce = 0
-	agonyforce = 80
+	agonyforce = 165
 	status = 1
 	block_chance = 60
 	sales_price = 20
-	weapon_speed_delay = 4
+	weapon_speed_delay = 5
 	sharp = TRUE
 	obj_flags = OBJ_FLAG_CONDUCTIBLE
 	w_class = ITEM_SIZE_HUGE
 	atom_flags = ATOM_FLAG_NO_BLOOD
 	origin_tech = list(TECH_MAGNET = 7, TECH_COMBAT = 7)
 	attack_verb = list("violated", "penetrated", "infested")
+
+/obj/item/melee/baton/nidstun/dropped() //since nodrop is fucked this will deal with it for now.
+	..()
+	spawn(1) if(src) qdel(src)

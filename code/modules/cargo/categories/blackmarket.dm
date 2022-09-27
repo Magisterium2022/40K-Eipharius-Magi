@@ -8,7 +8,7 @@
 
 /datum/cargo_entry/bmarket/taurifle
 	name = "T*u Pulse Rifle"
-	cost = 159
+	cost = 189
 	item_path = /obj/item/gun/energy/pulse/pulserifle
 
 /datum/cargo_entry/bmarket/krootrifle
@@ -18,17 +18,17 @@
 
 /datum/cargo_entry/bmarket/shoota
 	name = "Ork Shoota"
-	cost = 37
+	cost = 45
 	item_path = /obj/item/gun/projectile/ork/automatic/shoota
 
 /datum/cargo_entry/bmarket/ritualknife
 	name = "Ritual Knife"
-	cost = 59
+	cost = 69
 	item_path = /obj/item/material/sword/skinning_knife
 
 /datum/cargo_entry/bmarket/chaosknife
 	name = "Ch**s Knife"
-	cost = 55
+	cost = 65
 	item_path = /obj/item/material/sword/chaosknife
 
 /datum/cargo_entry/bmarket/slaaneshsword
@@ -38,17 +38,17 @@
 
 /datum/cargo_entry/bmarket/hellblade
 	name = "H*ll Blade"
-	cost = 290
+	cost = 280
 	item_path = /obj/item/material/sword/hellblade
 
 /datum/cargo_entry/bmarket/magushelm
 	name = "Magus Helm"
-	cost = 40
+	cost = 50
 	item_path = /obj/item/clothing/head/culthood/magus
 
 /datum/cargo_entry/bmarket/magusrobes
 	name = "Magus Robes"
-	cost = 110
+	cost = 120
 	item_path = /obj/item/clothing/suit/cultrobes/magusred
 
 /datum/cargo_entry/bmarket/batterer
@@ -66,10 +66,35 @@
 	cost = 100
 	item_path = /obj/item/storage/box/syndie_kit/imp_freedom
 
-/datum/cargo_entry/bmarket/compressionimplant
-	name = "Compression Implant Box"
+/datum/cargo_entry/bmarket/admin
+	name = "Administratum Forging Kit"
+	cost = 65
+	item_path = /obj/item/storage/backpack/satchel/syndie_kit/clerical
+
+/datum/cargo_entry/bmarket/vox
+	name = "Stolen Command Vox"
 	cost = 100
-	item_path = /obj/item/storage/box/syndie_kit/imp_compress
+	item_path = /obj/item/device/radio/headset/heads/rt
+
+/datum/cargo_entry/bmarket/voxtau
+	name = "Stolen Xenos Vox"
+	cost = 200
+	item_path = /obj/item/device/radio/headset/tau
+
+/datum/cargo_entry/bmarket/spy
+	name = "Spy Kit"
+	cost = 70
+	item_path = /obj/item/storage/box/syndie_kit/spy
+
+/datum/cargo_entry/bmarket/syringekit
+	name = "Syringe Gun Kit"
+	cost = 60
+	item_path = /obj/item/storage/box/syndie_kit/syringegun
+
+/datum/cargo_entry/bmarket/smokes
+	name = "Tricky Smokes Kit"
+	cost = 100
+	item_path = /obj/item/storage/box/syndie_kit/cigarette
 
 /datum/cargo_entry/bmarket/explosiveimplant
 	name = "Explosive Implant Box"
@@ -78,5 +103,5 @@
 
 /datum/cargo_entry/bmarket/batterer
 	name = "Mind Batterer"
-	cost = 400
+	cost = 500
 	item_path = /obj/item/device/batterer

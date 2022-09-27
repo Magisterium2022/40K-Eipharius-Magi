@@ -1,7 +1,7 @@
 /obj/item/projectile/bullet
 	name = "bullet"
 	icon_state = "bullet"
-	fire_sound = 'sound/weapons/gunshot/gunshot_strong.ogg'
+	fire_sound = 'sound/weapons/gunshot/auto1.ogg'
 	damage = 60
 	damage_type = BRUTE
 	nodamage = 0
@@ -173,23 +173,23 @@
 
 /obj/item/projectile/bullet/pistol
 	damage = 35 //9mm, .38, etc
-	fire_sound = "gunshot"
+	fire_sound = 'sound/weapons/gunshot/auto1.ogg'
 	armor_penetration = 10
 
 /obj/item/projectile/bullet/pistol/ap
 	damage = 38
-	fire_sound = "gunshot"
+	fire_sound = 'sound/weapons/gunshot/auto1.ogg'
 	armor_penetration = 20
 
 /obj/item/projectile/bullet/pistol/ms
 	damage = 45
-	fire_sound = "gunshot"
+	fire_sound = 'sound/weapons/gunshot/auto1.ogg'
 	armor_penetration = -10
 
 /obj/item/projectile/bullet/pistol/medium
 	damage = 38 //.45
 	armor_penetration = 15
-	fire_sound = "gunshot"
+	fire_sound = 'sound/weapons/gunshot/auto1.ogg'
 
 /obj/item/projectile/bullet/pistol/medium/ap
 	damage = 42
@@ -200,7 +200,7 @@
 	armor_penetration = -5
 
 /obj/item/projectile/bullet/pistol/medium/smg
-	fire_sound = 'sound/weapons/gunshot/gunshot_smg.ogg'
+	fire_sound = 'sound/weapons/gunshot/auto1.ogg'
 	damage = 35 //10mm
 	armor_penetration = 15
 
@@ -213,7 +213,7 @@
 	armor_penetration = -5
 
 /obj/item/projectile/bullet/pistol/medium/revolver
-	fire_sound = 'sound/weapons/gunshot/gunshot_strong.ogg'
+	fire_sound = 'sound/weapons/gunshot/auto5.ogg'
 	damage = 44 //.44 magnum or something
 	armor_penetration = 15
 
@@ -226,7 +226,7 @@
 	armor_penetration = -10
 
 /obj/item/projectile/bullet/pistol/strong //matebas
-	fire_sound = 'sound/weapons/gunshot/gunshot_strong.ogg'
+	fire_sound = 'sound/weapons/gunshot/auto5.ogg'
 	damage = 50 //.50AE
 	armor_penetration = 20
 
@@ -263,13 +263,13 @@
 
 /obj/item/projectile/bullet/shotgun
 	name = "slug"
-	fire_sound = 'sound/weapons/gunshot/shotgun.ogg'
+	fire_sound = 'sound/weapons/gunshot/shotgun3.ogg'
 	damage = 75
 	armor_penetration = 15
 
 /obj/item/projectile/bullet/shotgun/ms
 	name = "MS slug"
-	fire_sound = 'sound/weapons/gunshot/shotgun.ogg'
+	fire_sound = 'sound/weapons/gunshot/shotgun3.ogg'
 	damage = 90
 	armor_penetration = -5
 
@@ -286,7 +286,7 @@
 //Overall less damage than slugs in exchange for more damage at very close range and more embedding
 /obj/item/projectile/bullet/pellet/shotgun
 	name = "buckshot"
-	fire_sound = 'sound/weapons/gunshot/shotgun.ogg'
+	fire_sound = 'sound/weapons/gunshot/shotgun3.ogg'
 	damage = 25
 	pellets = 10
 	range_step = 3
@@ -301,40 +301,40 @@
 	penetrating = TRUE
 
 /obj/item/projectile/bullet/rifle/a556
-	fire_sound = 'sound/weapons/gunshot/gunshot3.ogg'
+	fire_sound = 'sound/weapons/gunshot/auto2.ogg'
 	damage = 45
 	armor_penetration = 10
 
 /obj/item/projectile/bullet/rifle/a556/ap
-	fire_sound = 'sound/weapons/gunshot/gunshot3.ogg'
+	fire_sound = 'sound/weapons/gunshot/auto2.ogg'
 	damage = 49
 	armor_penetration = 20
 
 /obj/item/projectile/bullet/rifle/a556/ms
-	fire_sound = 'sound/weapons/gunshot/gunshot3.ogg'
+	fire_sound = 'sound/weapons/gunshot/auto2.ogg'
 	damage = 55
 	armor_penetration = -10
 
 /obj/item/projectile/bullet/rifle/a762
-	fire_sound = 'sound/weapons/gunshot/gunshot2.ogg'
+	fire_sound = 'sound/weapons/gunshot/auto2.ogg'
 	damage = 61
 	armor_penetration = 10
 	penetrating = TRUE
 
 /obj/item/projectile/bullet/rifle/a762/ap
-	fire_sound = 'sound/weapons/gunshot/gunshot2.ogg'
+	fire_sound = 'sound/weapons/gunshot/auto2.ogg'
 	damage = 64
 	armor_penetration = 20
 	penetrating = TRUE
 
 /obj/item/projectile/bullet/rifle/a762/ms
-	fire_sound = 'sound/weapons/gunshot/gunshot2.ogg'
+	fire_sound = 'sound/weapons/gunshot/auto2.ogg'
 	damage = 71
 	armor_penetration = -10
 	penetrating = TRUE
 
 /obj/item/projectile/bullet/rifle/a145
-	fire_sound = 'sound/weapons/gunshot/sniper.ogg'
+	fire_sound = 'sound/weapons/gunshot/loudbolt.ogg'
 	damage = 95
 	armor_penetration = 20
 	//hitscan = 1 //so the PTR isn't useless as a sniper weapon
@@ -347,15 +347,15 @@
 	penetration_modifier = 1.5
 
 /obj/item/projectile/bullet/rifle/lp338
-	fire_sound = 'sound/weapons/gunshot/sniper.ogg'
-	damage = 100
+	fire_sound = 'sound/weapons/gunshot/loudbolt.ogg'
+	damage = 130
 	armor_penetration = 45
 	penetrating = TRUE
 
 /obj/item/projectile/bullet/rifle/lp338/jhp
 	name = "JHP bullet"
-	fire_sound = 'sound/weapons/gunshot/sniper.ogg'
-	damage = 120
+	fire_sound = 'sound/weapons/gunshot/loudbolt.ogg'
+	damage = 160
 	armor_penetration = 5
 
 /obj/item/projectile/bullet/rifle/lp338/needler
@@ -465,12 +465,12 @@
 
 /obj/item/projectile/bullet/ork
 	name = "scrap"
-	fire_sound = 'sound/weapons/gunshot/gunshot_strong.ogg'
+	fire_sound = 'sound/weapons/gunshot/loudbolt.ogg'
 	damage = 49
 
 /obj/item/projectile/bullet/ork/shoota
 	name = "piece of trash"
-	fire_sound = 'sound/weapons/gunshot/gunshot_strong.ogg'
+	fire_sound = 'sound/weapons/gunshot/loudbolt.ogg'
 	damage = 49
 
 
@@ -555,14 +555,14 @@
 /obj/item/projectile/bullet/rifle/lascannon/melta
 	fire_sound = 'sound/weapons/guns/misc/laser_searwall.ogg'
 	icon_state = "lasbolt"
-	damage = 180
+	damage = 220
 	damage_type = BURN
 	penetration_modifier = 2
 
 /obj/item/projectile/bullet/rifle/lascannon/melta/inferno
 	fire_sound = 'sound/weapons/guns/misc/laser_searwall.ogg'
 	icon_state = "lasbolt"
-	damage = 260
+	damage = 290
 	damage_type = BURN
 	penetration_modifier = 2
 
@@ -586,7 +586,7 @@
 	icon_state = "ion"
 	damage = 80
 	damage_type = BRUTE
-	armor_penetration = 60
+	armor_penetration = 30
 	penetration_modifier = 2
 
 /obj/item/projectile/bullet/rifle/galvanic/fire
@@ -594,14 +594,14 @@
 	icon_state = "ion"
 	damage = 40
 	damage_type = BRUTE
-	armor_penetration = 60
+	armor_penetration = 30
 	penetration_modifier = 2
 
 /obj/item/projectile/bullet/rifle/galvanic/fire/on_hit(var/atom/target, var/blocked = 0)
 	if(ishuman(target))
 		var/mob/living/carbon/human/H = target
 		if(!istype(H.wear_suit, /obj/item/clothing/suit/fire))
-			H.adjust_fire_stacks(50)
+			H.adjust_fire_stacks(20)
 			H.IgniteMob()
 		new /obj/flamer_fire(H.loc, 12, 10, "red", 1)
 		if(H.isChild())
@@ -633,3 +633,47 @@
 	if(istype(target, /mob/living/carbon/human))
 		var/mob/living/carbon/human/M = target
 		M.apply_effect((rand(80,140)),IRRADIATE,0)
+
+/obj/item/projectile/bullet/rifle/exitus
+	name = "bullet"
+	icon_state = "bullet"
+	damage = 260 //Admin only spawn for now.
+	damage_type = BRUTE
+	check_armour = "bullet"
+	armor_penetration = 40
+	embed = 1
+	sharp = 1
+	light_power = 0 
+	light_range = 0
+	penetration_modifier = 1
+	penetrating = 200
+
+/obj/item/projectile/bullet/rifle/exitus/explosive
+	name = "bullet"
+	icon_state = "bullet"
+	damage = 25 //Admin only spawn for now.
+	damage_type = BRUTE
+
+/obj/item/projectile/bullet/rifle/exitus/explosive/on_hit(var/atom/target)
+	if(istype(target, /mob/living/carbon/human))
+	var/mob/living/carbon/human/M = target
+	M.gib()
+	qdel(M)
+
+/obj/item/projectile/bullet/rifle/exitus/toxin
+	damage_type = TOX
+
+/obj/item/projectile/bullet/rifle/exitus/fire
+
+/obj/item/projectile/bullet/rifle/exitus/fire/on_hit(var/atom/target)
+	damage = 40 //Admin only spawn for now.
+	damage_type = BURN
+	if(ishuman(target))
+		var/mob/living/carbon/human/H = target
+		if(!istype(H.wear_suit, /obj/item/clothing/suit/armor/seolsuit))
+			H.adjust_fire_stacks(60)
+			H.IgniteMob()
+		new /obj/flamer_fire(H.loc, 15, 14, "red", 1)
+		if(H.isChild())
+			var/mob/living/carbon/human/F = firer
+			F.unlock_achievement(new/datum/achievement/child_fire())

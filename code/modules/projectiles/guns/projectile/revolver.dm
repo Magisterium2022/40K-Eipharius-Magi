@@ -7,15 +7,15 @@
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2)
 	handle_casings = CYCLE_CASINGS
 	max_shells = 6
-	accuracy = -2
+	accuracy = 1
 	fire_delay= 3
 	ammo_type = /obj/item/ammo_casing/a357
 	var/chamber_offset = 0 //how many empty chambers in the cylinder until you hit a round
 	unload_sound 	= 'sound/weapons/guns/interact/rev_magout.ogg'
 	reload_sound 	= 'sound/weapons/guns/interact/rev_magin.ogg'
 	bulletinsert_sound 	= 'sound/weapons/guns/interact/rev_magin.ogg'
-	fire_sound = 'sound/weapons/guns/fire/revolver_fire.ogg'
-	sales_price = 30
+	fire_sound = 'sound/weapons/gunshot/auto5.ogg'
+	sales_price = 22
 
 /obj/item/gun/projectile/revolver/cpt
 	name = "Captain's Special"
@@ -31,7 +31,7 @@
 	caliber = "shotgun"
 	fire_delay= 2.7
 	ammo_type = /obj/item/ammo_casing/shotgun
-	fire_sound = 'sound/weapons/guns/fire/shotgun.ogg'
+	fire_sound = 'sound/weapons/gunshot/shotgun3.ogg'
 
 /obj/item/gun/projectile/revolver/cpt/magistrate
 	name = "Commandant's Special"
@@ -74,9 +74,10 @@
 	caliber = ".50"
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2)
 	ammo_type = /obj/item/ammo_casing/a50
-	sales_price = 40
-	accuracy = -3
+	sales_price = 35
+	accuracy = 0
 	fire_delay= 3
+	fire_sound = 'sound/weapons/gunshot/auto5.ogg'
 
 /obj/item/gun/projectile/revolver/detective
 	name = "revolver"
@@ -111,7 +112,7 @@
 	icon_state = "snubby"
 	max_shells = 6
 	caliber = "38"
-	accuracy = -3.5
+	accuracy = 1
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2)
 	ammo_type = /obj/item/ammo_casing/c38
 
@@ -125,14 +126,14 @@
 	handle_casings = CYCLE_CASINGS
 	max_shells = 6
 	force = 15
-	accuracy = -2.5 //not the best craftsmanship
-	fire_delay= 3
+	accuracy = 1 //not the best craftsmanship
+	fire_delay= 2.6
 	ammo_type = /obj/item/ammo_casing/a357
 	var/chamber_offset = 0 //how many empty chambers in the cylinder until you hit a round
 	unload_sound 	= 'sound/weapons/guns/interact/rev_magout.ogg'
 	reload_sound 	= 'sound/weapons/guns/interact/rev_magin.ogg'
 	bulletinsert_sound 	= 'sound/weapons/guns/interact/rev_magin.ogg'
-	fire_sound = 'sound/weapons/guns/fire/revolver_fire.ogg'
+	fire_sound = 'sound/weapons/gunshot/auto5.ogg'
 
 /obj/item/gun/projectile/necros
 	name = "Necros Revolver"
@@ -144,15 +145,15 @@
 	handle_casings = CYCLE_CASINGS
 	max_shells = 6
 	force = 20
-	accuracy = -3
+	accuracy = 0.5
 	fire_delay= 2.8
 	ammo_type = /obj/item/ammo_casing/c44
 	var/chamber_offset = 0 //how many empty chambers in the cylinder until you hit a round
 	unload_sound 	= 'sound/weapons/guns/interact/rev_magout.ogg'
 	reload_sound 	= 'sound/weapons/guns/interact/rev_magin.ogg'
 	bulletinsert_sound 	= 'sound/weapons/guns/interact/rev_magin.ogg'
-	fire_sound = 'sound/weapons/guns/fire/revolver_fire.ogg'
-	sales_price = 33
+	fire_sound = 'sound/weapons/gunshot/auto5.ogg'
+	sales_price = 25
 
 /obj/item/gun/projectile/slugrevolver
 	name = "slug revolver"
@@ -164,15 +165,15 @@
 	handle_casings = CYCLE_CASINGS
 	max_shells = 6
 	force = 10
-	accuracy = -2.5
-	fire_delay= 2.7
+	accuracy = 0.8
+	fire_delay= 2.6
 	ammo_type = /obj/item/ammo_casing/c44
 	var/chamber_offset = 0 //how many empty chambers in the cylinder until you hit a round
 	unload_sound 	= 'sound/weapons/guns/interact/rev_magout.ogg'
 	reload_sound 	= 'sound/weapons/guns/interact/rev_magin.ogg'
 	bulletinsert_sound 	= 'sound/weapons/guns/interact/rev_magin.ogg'
-	fire_sound = 'sound/weapons/guns/fire/revolver_fire.ogg'
-	sales_price = 37
+	fire_sound = 'sound/weapons/gunshot/auto5.ogg'
+	sales_price = 30
 
 // Blade Runner pistol.
 /obj/item/gun/projectile/revolver/deckard

@@ -219,7 +219,7 @@ Template:
 				/obj/item/clothing/accessory/legguards/riot = 6)
 
 /obj/random/loot/guardarmor
-	name = "Special Guard Armor"
+	name = "Special Guard Armor" // After manor update we delete this.
 	desc = "This is a loot spawner that spawns special imperial guardsmen armor and no more then 2-3 should be on the map."
 	icon = 'icons/obj/clothing/ties.dmi'
 	icon_state = "horribletie"
@@ -230,7 +230,7 @@ Template:
 				/obj/item/clothing/suit/armor/krieger/grenadier = 1)
 
 /obj/random/loot/guardhelmet
-	name = "Guard Helmet"
+	name = "Guard Helmet" // After manor update we delete this.
 	desc = "This is a loot spawner that spawns imperial guardsmen armor."
 	icon = 'icons/obj/clothing/ties.dmi'
 	icon_state = "horribletie"
@@ -268,6 +268,10 @@ Template:
 				/obj/item/material/sword/cane = 4,
 				/obj/item/melee/classic_baton/trench_club = 8,
 				/obj/item/melee/telebaton = 12,
+				/obj/item/melee/trench_axe/glaive/adamantine = 1,
+				/obj/item/melee/trench_axe/lance/adamantine = 1,
+				/obj/item/material/sword/cutro/adamantine = 1,
+				/obj/item/material/sword/broadsword/adamantine = 1,
 				/obj/item/melee/trench_axe/glaive = 6,
 				/obj/item/melee/trench_axe/bardiche = 6,
 				/obj/item/melee/trench_axe/lance = 4,
@@ -314,7 +318,7 @@ Template:
 				/obj/item/material/sword/sabre = 4)
 
 /obj/random/loot/lightstubber
-	name = "Light Stubber"
+	name = "Light Stubber" // After manor update we delete this.
 	desc = "This is a weapon loot spawner with a high chance of spawning common light stubbers."
 	icon = 'icons/obj/weapons/gun/projectile.dmi'
 	icon_state = "revolver"
@@ -334,7 +338,7 @@ Template:
 				/obj/item/gun/projectile/bolter_pistol = 1)
 
 /obj/random/loot/lightstubberammo
-	name = "Light Stubber Ammo"
+	name = "Light Stubber Ammo" // After manor update we delete this.
 	desc = "This is an ammo spawner that spawns ammo for light stubbers."
 	icon = 'icons/obj/ammo.dmi'
 	icon_state = "45-10"
@@ -383,7 +387,7 @@ Template:
 				/obj/item/gun/projectile/bolter_pistol = 1)
 
 /obj/random/loot/lightlasgun
-	name = "Light Lasgun"
+	name = "Light Lasgun" // After manor update we delete this.
 	desc = "This is a weapon loot spawner with a high chance of spawning common light lasguns."
 	icon = 'icons/obj/weapons/gun/projectile.dmi'
 	icon_state = "revolver"
@@ -396,48 +400,37 @@ Template:
 				/obj/item/gun/energy/las/laspistol/militarum = 3,
 				/obj/item/gun/energy/las/lasgun/tinkered = 2,
 				/obj/item/gun/energy/las/lasgun/catachan = 4,
-				/obj/item/gun/energy/las/lasgun/tinkered/catachan = 2,
-				/obj/item/gun/energy/las/lasgun/longlas = 1)
+				/obj/item/gun/energy/las/lasgun/tinkered/catachan = 2)
 
 /obj/random/loot/lasgunammo
-	name = "Lasgun Ammo"
+	name = "Lasgun Ammo" 
 	desc = "This is an ammo spawner that spawns ammo for lasguns."
 	icon = 'icons/obj/ammo.dmi'
 	icon_state = "45-10"
 
 /obj/random/loot/lasgunammo/spawn_choices()
-	return list(/obj/item/cell/lasgun = 20,
-				/obj/item/cell/hyper = 1)
+	return list(/obj/item/cell/lasgun = 12,
+				/obj/item/cell/lasgun/hotshot = 1)
 
 /obj/random/loot/heavystubberammo
-	name = "Heavy Stubber Ammo"
+	name = "Heavy Stubber Ammo" // After manor update we delete this.
 	desc = "This is an ammo spawner that spawns ammo for heavy stubbers."
 	icon = 'icons/obj/ammo.dmi'
 	icon_state = "45-10"
 
 /obj/random/loot/heavystubberammo/spawn_choices()
-	return list(/obj/item/ammo_magazine/mc9mmt/machinepistol = 10,
-	            /obj/item/ammo_magazine/bolt_rifle_magazine = 1,
-				/obj/item/ammo_box/rifle = 5,
-				/obj/item/ammo_box/shotgun = 4,
-				/obj/item/ammo_magazine/box/shotgun/slug = 2,
-				/obj/item/ammo_magazine/box/a556/mg08 = 10,
+	return list(/obj/item/ammo_magazine/box/a556/mg08 = 10,
 				/obj/item/ammo_magazine/box/a556/mg08 = 5)
 
 /obj/random/loot/heavystubber
-	name = "Heavy Stubber"
+	name = "Heavy Stubber" // After manor update we delete this.
 	desc = "This is a weapon loot spawner with a high chance of spawning common heavy stubbers."
 	icon = 'icons/obj/weapons/gun/projectile.dmi'
 	icon_state = "revolver"
 
 /obj/random/loot/heavystubber/spawn_choices()
-	return list(/obj/item/gun/projectile/lockebolter = 1,
-				/obj/item/gun/projectile/shotgun/pump = 6,
-				/obj/item/gun/projectile/shotgun/pump/boltaction/shitty/tinkered = 8,
-				/obj/item/gun/projectile/shotgun/pump/boltaction/shitty/leverchester = 9,
-				/obj/item/gun/projectile/shotgun/pump/shitty/magrave = 8,
-				/obj/item/gun/projectile/automatic/stubber = 10,
-				/obj/item/gun/projectile/automatic/stubber/villiers = 5)
+	return list(/obj/item/gun/projectile/automatic/stubber = 25,
+				/obj/item/gun/projectile/automatic/stubber/villiers = 15)
 
 // DUNGEON & PILGRIM LOOT. These spawners are generally low quality and have wide selection making them ideal as generic loot.
 
@@ -494,6 +487,8 @@ Template:
 				/obj/item/gun/projectile/automatic/m22/combatrifle = 1,
 				/obj/item/gun/projectile/automatic/machinepistol = 4,
 				/obj/item/gun/projectile/automatic/machinepistol/a80 = 3,
+				/obj/item/gun/projectile/automatic/messina = 3,
+				/obj/item/gun/projectile/automatic/autogun = 1,
 				/obj/item/gun/projectile/automatic/autogrim = 2,
 				/obj/item/gun/projectile/automatic/autogrim/krieg = 1,
 				/obj/item/gun/projectile/revolver/mateba = 1,
@@ -510,9 +505,9 @@ Template:
 
 /obj/random/loot/goodweapon/spawn_choices()
 	return list(/obj/item/gun/energy/las/lasgun/lucius/tinkered = 4,
-				/obj/item/gun/energy/las/lasgun/rare = 4,
+				/obj/item/gun/energy/las/lasgun/rare = 3,
 				/obj/item/gun/energy/las/lasgun/tinkered/catachan = 4,
-				/obj/item/gun/energy/las/lasgun/tinkered = 4,
+				/obj/item/gun/energy/las/lasgun/tinkered = 2,
 				/obj/item/gun/energy/las/lasgun/longlas = 2,
 				/obj/item/gun/energy/las/lasgun/longlas/krieg = 1,
 				/obj/item/gun/projectile/slugrevolver = 1,
@@ -530,20 +525,24 @@ Template:
 	icon_state = "horribletie"
 
 /obj/random/loot/randomarmor/spawn_choices()
-	return list(/obj/item/clothing/suit/armor/militia = 3,
-				/obj/item/clothing/suit/cloak = 3,
-				/obj/item/clothing/suit/armor/cuirass = 3,
-				/obj/item/clothing/suit/armor/salvage = 3,
+	return list(/obj/item/clothing/suit/armor/militia = 1,
+				/obj/item/clothing/suit/cloak = 1,
+				/obj/item/clothing/suit/armor/cuirass = 1,
+				/obj/item/clothing/suit/armor/salvage = 1,
 				/obj/item/clothing/suit/armor/guardsman/mercenary = 2,
-				/obj/item/clothing/suit/armor/slanclothing/maleslan = 3,
-				/obj/item/clothing/head/helmet/salvage = 3,
-				/obj/item/clothing/head/helmet/mining = 3,
+				/obj/item/clothing/suit/armor/slanclothing/maleslan = 1,
+				/obj/item/clothing/suit/armor/necromundaflak1 = 1,
+				/obj/item/clothing/suit/armor/necromundacarapace1 = 1,
+				/obj/item/clothing/suit/armor/ranger3 = 2,
+				/obj/item/clothing/suit/armor/ranger2 = 2,
+				/obj/item/clothing/head/helmet/salvage = 1,
+				/obj/item/clothing/head/helmet/mining = 1,
 				/obj/item/clothing/suit/armor/heavyflaksuit = 1,
 				/obj/item/clothing/suit/armor/heavyduster = 1,
 				/obj/item/clothing/suit/armor/flak1 = 1,
 				/obj/item/clothing/suit/armor/flak2 = 1,
 				/obj/item/clothing/suit/armor/scum2 = 1,
-				/obj/item/clothing/suit/armor/leather = 2,
+				/obj/item/clothing/suit/armor/leather = 1,
 				/obj/item/clothing/suit/armor/hjacket = 1,
 				/obj/item/clothing/suit/armor/hjacket2 = 1,
 				/obj/item/clothing/suit/armor/slumcoat = 1,
@@ -564,17 +563,13 @@ Template:
 				/obj/item/storage/belt/medical/full = 1,
 				/obj/item/reagent_containers/hypospray/autoinjector/revive = 4,
 				/obj/item/stack/barbwire = 3,
-				/obj/random/canned_food = 5,
-				/obj/item/reagent_containers/food/drinks/canteen = 1,
+				/obj/random/canned_food = 1,
 				/obj/item/flame/lighter/zippo = 1,
 				/obj/item/device/flashlight/lantern = 1,
 				/obj/item/storage/pill_bottle/happy = 1,
 				/obj/item/stack/material/silver/ten = 1,
-				/obj/item/stack/material/gold/ten = 1,
-				/obj/item/stack/material/cloth/fifty = 1,
-				/obj/item/stack/material/glass/fifty = 3,
-				/obj/item/stack/material/plasteel/ten = 1,
-				/obj/item/stack/material/steel/fifty = 6)
+				/obj/item/stack/material/glass/fifty = 1,
+				/obj/item/stack/material/steel/fifty = 2)
 
 /obj/random/loot/randomitemcaves
 	name = "Random Item Caves"
@@ -586,20 +581,11 @@ Template:
 	return list(/obj/item/shovel = 2,
 				/obj/item/clothing/glasses/night = 1,
 				/obj/item/pickaxe = 2,
-				/obj/item/storage/belt/utility/full = 2,
 				/obj/item/storage/firstaid/combat = 1,
 				/obj/item/storage/firstaid/surgery = 1,
 				/obj/item/reagent_containers/hypospray/autoinjector/revive = 2,
-				/obj/item/clothing/suit/armor/salvage = 4,
-				/obj/item/clothing/suit/armor/militia = 3,
 				/obj/item/clothing/accessory/holster/waist = 3,
 				/obj/item/clothing/accessory/storage/webbing = 4,
-				/obj/item/clothing/accessory/legguards = 3,
-				/obj/item/gun/projectile/shotgun/pump/boltaction/shitty/tinkered = 1,
-				/obj/item/gun/projectile/shotgun/pump/boltaction/shitty/leverchester = 1,
-				/obj/item/gun/projectile/shotgun/pump/shitty/magrave = 1,
-				/obj/item/material/sword/combat_knife/rare = 1,
-				/obj/item/melee/trench_axe = 1,
 				/obj/item/stack/thrones2/ten = 1,
 				/obj/item/grenade/frag/high_yield/homemade = 5,
 				/obj/item/grenade/frag = 3,
@@ -617,10 +603,6 @@ Template:
 				/obj/item/storage/firstaid/adv = 1,
 				/obj/item/clothing/suit/armor/militia = 2,
 				/obj/item/material/sword/combat_knife/rare = 4,
-				/obj/item/gun/projectile/mervex = 1,
-				/obj/item/gun/projectile/necros = 1,
-				/obj/item/gun/projectile/slugrevolver = 1,
-				/obj/item/gun/projectile/warfare/kieji = 1,
 				/obj/item/melee/trench_axe = 1,
 				/obj/item/stack/thrones2/ten = 1,
 				/obj/item/clothing/accessory/holster/waist = 3,

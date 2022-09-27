@@ -1,5 +1,5 @@
 
-/obj/item/gun/projectile/automatic/flamer/handflamer
+/*/obj/item/gun/projectile/automatic/flamer/handflamer 
 	name = "Mk.1 hand flamer"
 	desc = "An incredibly small hand-held flamethrower often used by the inquisition and the sisters."
 	icon_state = "flamer"
@@ -29,7 +29,7 @@
 
 	gun_type = GUN_LMG //anyone can use this... just not anyone should.
 
-
+*/
 
 /obj/item/gun/projectile/colt
 	name = "vintage .45 pistol"
@@ -77,7 +77,7 @@
 	desc = "The NT Mk58 is a cheap, ubiquitous sidearm, produced by a NanoTrasen subsidiary. This one has a sweet wooden grip, among other modifications. Uses .45 rounds."
 	name = "custom .45 Pistol"
 	icon_state = "secgundark"
-	accuracy = -1
+	accuracy = 0
 
 /obj/item/gun/projectile/sec/wood/update_icon()
 	..()
@@ -98,7 +98,7 @@
 	allowed_magazines = /obj/item/ammo_magazine/c45m/warfare
 	caliber = ".45"
 	auto_eject = 1
-	accuracy = -0.5 //not the best stub pistol but still pretty good
+	accuracy = 0.5 //not the best stub pistol but still pretty good
 	auto_eject_sound = 'sound/weapons/smg_empty_alarm.ogg'
 	jammed_icon = "talon-j"
 
@@ -107,7 +107,7 @@
 	desc = "A modified slug pistol with a heavy frame and integrated suppressor, forged for the Assassins of the infamous Renegade Navigator Houses."
 	move_delay= 1.3
 	one_hand_penalty = 0.5
-	accuracy = -2
+	accuracy = 2.5
 	fire_delay = 0.5
 	silenced = 1
 	force = 20
@@ -132,7 +132,7 @@
 	w_class = ITEM_SIZE_NORMAL
 	caliber = ".45"
 	silenced = 1
-	accuracy = 0
+	accuracy = 1
 	fire_delay = 1.3
 	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2, TECH_ILLEGAL = 8)
 	load_method = MAGAZINE
@@ -158,6 +158,7 @@
 /obj/item/gun/projectile/genmessorp
 	name = "Genmessor stubpistol"
 	icon_state = "sheetp"
+	item_state = "pistol"
 	w_class = ITEM_SIZE_NORMAL
 	caliber = "9mm"
 	load_method = MAGAZINE
@@ -195,7 +196,7 @@
 	icon_state = "gyropistol"
 	max_shells = 8
 	caliber = "75"
-	accuracy = -5
+	accuracy = 0
 	origin_tech = list(TECH_COMBAT = 3)
 	ammo_type = /obj/item/ammo_casing/a75
 	load_method = MAGAZINE
@@ -370,7 +371,7 @@
 	icon_state = "slugga"
 	caliber = ".75"
 	can_jam = TRUE //yes it can jam
-	accuracy = -6 //WHY WAS IT SO FUCKING ACCURATE BEFORE? IT WAS 0.2!
+	accuracy = -4 //WHY WAS IT SO FUCKING ACCURATE BEFORE? IT WAS 0.2!
 	force = 20
 	move_delay = 1.5
 	load_method = MAGAZINE
@@ -385,7 +386,7 @@
 	item_state = "bpistol"
 	force = 10
 	caliber = ".75"
-	accuracy = -5
+	accuracy = -1
 	fire_delay = 1.8
 	move_delay = 1.5
 	load_method = MAGAZINE
@@ -408,8 +409,8 @@
 	item_state = "gpistol"
 	force = 10
 	caliber = ".75"
-	accuracy = -6
-	fire_delay = 3
+	accuracy = -1.2
+	fire_delay = 2
 	move_delay = 5.0 // make it shit and mostly ornamental
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/bolt_pistol_magazine
@@ -430,8 +431,8 @@
 	item_state = "bpistol"
 	force = 15
 	caliber = ".75"
-	accuracy = -4 //VERY well maintained--maintened? eh, you get what i mean!
-	fire_delay = 1.2
+	accuracy = -0.5 //VERY well maintained--maintened? eh, you get what i mean!
+	fire_delay = 1.4
 	move_delay = 1.3
 	sales_price = 58
 
@@ -443,8 +444,8 @@
 	str_requirement = 18
 	force = 30
 	caliber = ".75"
-	accuracy = -3.5 //VERY well maintained--maintened? eh, you get what i mean!
-	fire_delay = 1
+	accuracy = 2 //VERY well maintained--maintened? eh, you get what i mean!
+	fire_delay = 1.2
 	move_delay = 1.5
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/bolt_pistol_magazine
@@ -466,8 +467,7 @@
 	loaded_icon = "sisterbpistol"
 	force = 20 //i don't think that De'az bolt pistols can have bayonets attached to them, but, imma leave this in, oh also, the Mars Pattern Mark II Scourge is the one with a bayonet.
 	sharp = 1
-	edge = 1
-	accuracy = -3 //normally only 2 of those spawn on the map, one with the sisters, and one on a room in the caves, and they can't even be fabricated
+	accuracy = 2.2 //normally only 2 of those spawn on the map, one with the sisters, and one on a room in the caves, and they can't even be fabricated
 	fire_delay = 1.5 //fastaa!
 	move_delay = 1.5 //honestly this is kinda of useless
 	attack_verb = list ("stabbed", "sliced")
@@ -514,7 +514,7 @@
 		list(mode_name="automatic",   	 burst=10, fire_delay=1.5,  move_delay=0, one_hand_penalty=1, burst_accuracy=list(0,-1,-1), dispersion=list(0.0, 0.1, 0.2), automatic = 2)
 		)
 	gun_type = GUN_AUTOMATIC
-	accuracy = 2
+	accuracy = 1
 
 /obj/item/gun/projectile/eldar/spistol/update_icon()
 	..()
@@ -522,3 +522,32 @@
 		icon_state = "shuriken_pistol"
 	else
 		icon_state = "shuriken_pistol-e"
+
+
+
+/obj/item/gun/projectile/exituspistol
+	name = "Exitus pistol"
+	desc = "The Exitus Pistol is an Imperial pistol and a signature weapon of the Vindicare Temple of the Officio Assassinorum. Like its cousin the Exitus Rifle, it is a masterpiece of Adeptus Mechanicus engineering and is custom-built for the requirements of the individual assassin. The Pistol is largely a backup weapon for the Exitus Rifle and is used in the rare circumstances the assassin is discovered, cornered, or in need of rapid-fire weaponry. With a built-in silencer and capable of penetrating most armor with ease, it is has saved the lives of many Vindicare Assassins."
+	icon_state = "tacpistol"
+	w_class = ITEM_SIZE_NORMAL
+	caliber = "exitus"
+	silenced = 1
+	accuracy = 2.5
+	slot_flags = SLOT_BACK|SLOT_S_STORE|SLOT_BELT
+	fire_delay = 1.3
+	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2, TECH_ILLEGAL = 8)
+	handle_casings = EJECT_CASINGS
+	load_method = MAGAZINE
+	max_shells = 5
+	str_requirement = 18 //Needs peak human strength to even think about using.
+	ammo_type = /obj/item/ammo_casing/exitus
+	magazine_type = /obj/item/ammo_magazine/exitus
+	allowed_magazines = list(/obj/item/ammo_magazine/exitus, /obj/item/ammo_magazine/exitus/toxin, /obj/item/ammo_magazine/exitus/fire/, /obj/item/ammo_magazine/exitus/explosive)
+	gun_type = GUN_SEMIAUTO
+
+/obj/item/gun/projectile/exituspistol/update_icon()
+	..()
+	if(ammo_magazine)
+		icon_state = "tacpistol"
+	else
+		icon_state = "tacpistol-e"

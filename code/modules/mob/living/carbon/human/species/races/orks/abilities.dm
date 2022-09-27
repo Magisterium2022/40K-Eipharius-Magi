@@ -37,7 +37,7 @@
 
 /mob/living/carbon/human/ork/proc/warscream()
 	set category = "Ork"
-	set name = "WAAAAGH! (100)"
+	set name = "WAAAAGH! (1)"
 	set desc = "WE AIN'T DONE FIGHTIN' YET!"
 	var/cooldown = FALSE
 	if(src.stat == DEAD)
@@ -110,6 +110,7 @@
 	visible_message("[name] flexs der' muscles afa' a long nap, feelin' der' strength an' skill return to 'em.")
 	src.add_stats(rand(17,18),rand(15,17),rand(6,10),14) //gives stats str, end, int, dex
 	src.add_skills(rand(10,10),rand(6,10),rand(0,3),0,0) //skills such as melee, ranged, med, eng and surg
+	src.adjustStaminaLoss(-INFINITY)
 	src.update_eyes() //should fix grey vision
 	src.warfare_language_shit(ORKZ) //secondary language
 	client?.color = null

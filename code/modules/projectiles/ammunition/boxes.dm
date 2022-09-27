@@ -148,17 +148,17 @@
 
 
 /obj/item/ammo_magazine/c45rifle/akarabiner
-	name = "Warmonger magazine (.45)"
+	name = "autogun magazine (.45)"
 	icon_state = "autorifle"
 
 
 /obj/item/ammo_magazine/c45rifle/combatrifle
-	name = "Nightfall magazine (.45)"
+	name = "Scipio magazine (.45)"
 	icon_state = "akarabiner"
 
 
 /obj/item/ammo_magazine/autogrim
-	name = "auto GRIM magazine (5.56mm)"
+	name = "autogun magazine (5.56mm)"
 	icon_state = "auto_grim"
 	mag_type = MAGAZINE
 	ammo_type = /obj/item/ammo_casing/a556
@@ -168,11 +168,11 @@
 	multiple_sprites = 1
 
 /obj/item/ammo_magazine/autogrim/ap
-	name = "auto AP GRIM magazine (5.56mm)"
+	name = "autogun AP magazine (5.56mm)"
 	ammo_type = /obj/item/ammo_casing/a556/ap
 
 /obj/item/ammo_magazine/autogrim/ms
-	name = "auto GRIM MS magazine (5.56mm)"
+	name = "autogun MS magazine (5.56mm)"
 	ammo_type = /obj/item/ammo_casing/a556/ms
 
 /obj/item/ammo_magazine/autogrim/empty
@@ -610,3 +610,48 @@
 	ammo_type = /obj/item/ammo_casing/radcarbine/radpistol
 	max_ammo = 10
 	multiple_sprites = 0
+
+/obj/item/ammo_magazine/exitus
+	name = "Exitus Rifle Magazine"
+	icon_state = "tinyersatz"
+	origin_tech = list(TECH_COMBAT = 2)
+	mag_type = MAGAZINE
+	caliber = "exitus"
+	matter = list(DEFAULT_WALL_MATERIAL = 1260)
+	ammo_type = /obj/item/ammo_casing/exitus
+	max_ammo = 5
+	multiple_sprites = 1
+
+/obj/item/ammo_magazine/exitus/toxin
+	name = "Exitus Rifle Hellfire Toxin Magazine"
+	icon_state = "tinyersatz"
+	origin_tech = list(TECH_COMBAT = 2)
+	mag_type = MAGAZINE
+	caliber = "exitus"
+	matter = list(DEFAULT_WALL_MATERIAL = 1260)
+	ammo_type = /obj/item/ammo_casing/exitus/toxin
+	max_ammo = 5
+	multiple_sprites = 1
+
+/obj/item/ammo_magazine/exitus/fire
+	name = "Exitus Rifle Incendiary Magazine"
+	icon_state = "tinyersatz"
+	origin_tech = list(TECH_COMBAT = 2)
+	mag_type = MAGAZINE
+	caliber = "exitus"
+	matter = list(DEFAULT_WALL_MATERIAL = 1260)
+	ammo_type = /obj/item/ammo_casing/exitus/fire
+	max_ammo = 5
+	multiple_sprites = 1
+
+/obj/item/ammo_magazine/exitus/explosive
+	name = "Exitus Rifle Explosive Round Magazine"
+	icon_state = "tinyersatz"
+	origin_tech = list(TECH_COMBAT = 2)
+	mag_type = MAGAZINE
+	caliber = "exitus"
+	matter = list(DEFAULT_WALL_MATERIAL = 1260)
+	ammo_type = /obj/item/ammo_casing/exitus/explosive
+	max_ammo = 5
+	multiple_sprites = 1
+
