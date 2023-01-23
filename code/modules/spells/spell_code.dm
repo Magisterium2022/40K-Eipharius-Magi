@@ -227,8 +227,9 @@ var/list/spells = typesof(/spell) //needed for the badmin verb for now
 		return 0
 
 	if(spell_flags & CONSTRUCT_CHECK)
-		for(var/turf/T in range(holder, 1))
+		for(var/turf/T in range(holder, 5))
 			if(findNullRod(T))
+			to_chat(src, "<spawn class='warning'>You cannot access the Empyrean nearby a Null!")
 				return 0
 
 	if(istype(user, /mob/living/simple_animal) && holder == user)
