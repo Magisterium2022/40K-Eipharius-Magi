@@ -63,6 +63,22 @@
 	if(isturf(target))
 		explosion(target, -1, 0, 2)
 
+
+/obj/item/projectile/bullet/bolt/inferno
+	fire_sound = 'sound/effects/explosion1.ogg'
+	damage = 45
+	armor_penetration = 20
+	damage_type = BURN
+	penetration_modifier = 0.8
+
+/obj/item/projectile/bullet/bolt/inferno/on_hit(var/atom/target, var/blocked = 0)
+	if(istype(target, /mob/living/carbon/human))
+		var/mob/living/carbon/human/M = target
+			M.adjust_fire_stacks(5)
+			M.IgniteMob()
+		new /obj/flamer_fire(H.loc, 15, 14, "red", 1)
+
+
 /obj/item/projectile/meteor
 	name = "meteor"
 	icon = 'icons/obj/meteor.dmi'
