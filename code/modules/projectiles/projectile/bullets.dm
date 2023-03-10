@@ -715,7 +715,7 @@
 	penetration_modifier = 5
 	
 
-/*
+//Keep them, I might want to spawn them.
 /obj/item/projectile/bullet/rifle/exitus
 	name = "bullet"
 	icon_state = "bullet"
@@ -759,4 +759,4 @@
 		if(H.isChild())
 			var/mob/living/carbon/human/F = firer
 			F.unlock_achievement(new/datum/achievement/child_fire())
-*/
+
