@@ -12,6 +12,9 @@
 	var/innate_flash_protection = FLASH_PROTECTION_NONE
 	max_damage = 45
 	sales_price = 15
+	var/vision_flags = null
+	var/see_invisible = null
+	var/darkness_view = 7
 
 /obj/item/organ/internal/eyes/optics
 	robotic = ORGAN_ROBOT
@@ -78,9 +81,6 @@
 	return -1
 
 
-
-
-
 /obj/item/organ/internal/eyes/augmetic
 	name = "Augmetic eyeballs"
 	icon_state = "eyes-prosthetic"
@@ -101,9 +101,6 @@
 	var/obj/item/organ/internal/eyes/augmetichud = null
 	var/hud
 	var/list/icon/current = list() //the current hud icons
-	var/vision_flags = null
-	var/see_invisible = null
-	var/darkness_view = 7
 /*	var/hud_holder
 
 /obj/item/organ/internal/eyes/augmetic/New()
@@ -214,8 +211,8 @@
 	innate_flash_protection = FLASH_PROTECTION_MAJOR
 	max_damage = 65
 	sales_price = 15
-	//darkness_view = 20
-	//see_invisible = SEE_INVISIBLE_NOLIGHTING
+	darkness_view = 20
+	see_invisible = SEE_INVISIBLE_NOLIGHTING
 
 /obj/item/organ/internal/eyes/necron
 	name = "Visual sensors"
